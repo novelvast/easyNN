@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>easyNN | 神经元测试</title>
+    <link rel="stylesheet" href="../../src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="../../src/pixi/pixi.min.js"></script>
+    
+
+</head>
+
+
+<body>
+
+    <div id = "neuron">
+
+    </div>
+
+      
+
+    
+</body>
+
+
+
+<script type="module" src="../../src/js/neurontest.js"></script>
+</html>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                activeNames: []
+            };
+        },
+    })
+    new Vue({
+        el: '#app2',
+    })
+
+</script>

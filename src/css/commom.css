@@ -1,0 +1,32 @@
+body {
+    background-color:rgb(109,109,109);
+}
+
+.maintext {
+    font-size: 32px;
+    font-family: "微软雅黑", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    color: white;
+    text-align: left;
+
+    margin: 200px 200px 200px 200px;
+    /* padding: 200px 200px 200px 200px; */
+}
+
+
+
+.button
+{
+    height: 40px;
+    width: 100px;
+    
+}
+
+#button_pre
+{
+    margin-left: 30%;
+}
+
+#button_next
+{
+    margin-right: 10%;
+}
