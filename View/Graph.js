@@ -1,13 +1,13 @@
-import {data} from "/Model/data.js";
-import { layout } from "/View/layout.js";
-import { loader } from "/View/View.js";
+import {data} from "../Model/data.js";
+import { layout } from "./layout.js";
+import { loader } from "./View.js";
 export class Graph extends PIXI.Sprite{
 
     constructor(datap){
         super();
 
         this.axis=new PIXI.Sprite(loader.resources["/images/graph/axis.png"].texture);
-        this.axis.x=window.innerWidth-240;
+        this.axis.x=layout.CANVAS_WIDTH-240;
         this.axis.y=layout.BOTTOMBUFFER-230;
         this.axis.scale.set(0.8);
         this.axis.name="axis";

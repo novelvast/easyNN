@@ -1,8 +1,8 @@
 // 每个页面的共有元素
 // 通过loader与其它文件交互，将图片转为可用格式
 //import { defaultInput } from "../Model/net.js";
-import {Button} from "/View/Button.js"
-import {layout} from "/View/layout.js"
+import {Button} from "./Button.js"
+import {layout} from "./layout.js"
 import {SlideHome,
     SlideInstruct1,
     SlideInstruct2,
@@ -68,9 +68,9 @@ import {SlideHome,
     SlideSandbox,
     SlideCredit,
     makeSlides,
-} from "/View/allSlides.js"
-//import { Slide } from "/View//Slide.js";
-import { textstyles } from "/View/textstyles.js";
+} from "./allSlides.js"
+import { Slide } from "./Slide.js";
+import { textstyles } from "./textstyles.js";
 
 export var openerloader = PIXI.loader;
 export var loader = PIXI.loader;
@@ -80,22 +80,30 @@ export class View{
         
         var vst=this;
         const app = new PIXI.Application({
-          autoResize: true,
-          width: window.innerWidth - 100,
-          height: window.innerHeight - 100,
-          backgroundColor: 0x666666,        // 0xf5f6ff
-          resolution: 2,
+            autoResize: true,
+            width: layout.CANVAS_WIDTH ,
+            height: layout.CANVAS_HEIGHT ,
+            backgroundColor: 0x666666,        // 0xf5f6ff
+            resolution: 2,
             transparent: true
         });
 
         this.app=app;
         document.getElementById("canvascon").appendChild(this.app.view);
+        // document.body.appendChild(this.app.view);
+
+        // var opener = new PIXI.Sprite(PIXI.Texture.from('/images/opener.png'));
+        //     opener.name="opener";
+        //     opener.anchor.set(0.5);
+        //     opener.x=layout.CANVAS_WIDTH/2;
+        //     opener.y=layout.CANVAS_HEIGHT/2;
+        // this.app.stage.addChild(opener);
 
         var loading = new PIXI.Sprite(PIXI.Texture.from('/images/loading.png'));
             loading.name="loading";
             loading.anchor.set(0.5);
-            loading.x=window.innerWidth/2;
-            loading.y=window.innerHeight/2;
+            loading.x=layout.CANVAS_WIDTH/2;
+            loading.y=layout.CANVAS_HEIGHT/2;
         this.app.stage.addChild(loading );
 
         //lol
@@ -312,13 +320,26 @@ export class View{
             vst.drawSlide_init();
 
 
+            // // 渲染页脚
+            // var footer=new PIXI.Graphics();
+            //     footer.name="footer";
+            //     footer.beginFill(0x666666);
+            //     footer.drawRect(0,layout.CANVAS_HEIGHT,layout.CANVAS_WIDTH,-layout.FOOTER_HEIGHT);
+            // app.stage.addChild(footer);
+
+            // // 渲染侧边栏
+            // var header = new PIXI.Graphics();
+            //     header.name="header";
+            //     header.beginFill(0x4d4d4d);
+            //     header.drawRect(0,0,layout.HEADER_WIDTH,layout.CANVAS_HEIGHT);
+            // app.stage.addChild(header);
 
 
 
-            //vst.createButtons();
+            // vst.createButtons();
 
-            //vst.caveats();
-            //app.stage.getChildByName("button_start").visible=true;
+            // vst.caveats();
+            // app.stage.getChildByName("button_start").visible=true;
             app.stage.getChildByName("loading").visible=false;
 
             /* numbers slides - helpful for debugging
@@ -335,49 +356,49 @@ export class View{
         window.addEventListener('resize', resize);
 
 
-        this.startwidth = window.innerWidth;
-        this.startheight = window.innerHeight;
-        this.startheight_nochange = window.innerHeight;
-        this.startwidth_nochange = window.innerWidth;
+        this.startwidth = layout.CANVAS_WIDTH;
+        this.startheight = layout.CANVAS_HEIGHT;
+        this.startheight_nochange = layout.CANVAS_HEIGHT;
+        this.startwidth_nochange = layout.CANVAS_WIDTH;
 
         var win = this;
 
         function resize(){
-            app.renderer.resize(window.innerWidth, window.innerHeight);
-            var changeY=window.innerHeight-win.startheight;
-            var changeX=window.innerWidth-win.startwidth;
+            app.renderer.resize(layout.CANVAS_WIDTH, layout.CANVAS_HEIGHT);
+            var changeY=layout.CANVAS_HEIGHT-win.startheight;
+            var changeX=layout.CANVAS_WIDTH-win.startwidth;
 
-            app.stage.getChildByName("opener").x=window.innerWidth/2;
-            app.stage.getChildByName("opener").y=window.innerHeight/2;
+            app.stage.getChildByName("opener").x=layout.CANVAS_WIDTH/2;
+            app.stage.getChildByName("opener").y=layout.CANVAS_HEIGHT/2;
 
-            app.stage.getChildByName("header").width=window.innerWidth;
-            app.stage.getChildByName("footer").width=window.innerWidth;
+            app.stage.getChildByName("header").width=layout.CANVAS_WIDTH;
+            app.stage.getChildByName("footer").width=layout.CANVAS_WIDTH;
             app.stage.getChildByName("footer").y=changeY;
 
-            app.stage.getChildByName("button_start").x=window.innerWidth/2;
-            app.stage.getChildByName("button_start").y=window.innerHeight/2 -20 +250,
+            app.stage.getChildByName("button_start").x=layout.CANVAS_WIDTH/2;
+            app.stage.getChildByName("button_start").y=layout.CANVAS_HEIGHT/2 -20 +250,
 
-            app.stage.getChildByName("button_nextslide").x=window.innerWidth/2 +100;
-            app.stage.getChildByName("button_nextslide").y=window.innerHeight-(75/2);
+            app.stage.getChildByName("button_nextslide").x=layout.CANVAS_WIDTH/2 +100;
+            app.stage.getChildByName("button_nextslide").y=layout.CANVAS_HEIGHT-(75/2);
 
-            app.stage.getChildByName("button_calc2sand").x=window.innerWidth/2 +100;
-            app.stage.getChildByName("button_calc2sand").y=window.innerHeight-(75/2);
+            app.stage.getChildByName("button_calc2sand").x=layout.CANVAS_WIDTH/2 +100;
+            app.stage.getChildByName("button_calc2sand").y=layout.CANVAS_HEIGHT-(75/2);
 
-            app.stage.getChildByName("button_prevslide").x=window.innerWidth/2 -100;
-            app.stage.getChildByName("button_prevslide").y=window.innerHeight-(75/2);
+            app.stage.getChildByName("button_prevslide").x=layout.CANVAS_WIDTH/2 -100;
+            app.stage.getChildByName("button_prevslide").y=layout.CANVAS_HEIGHT-(75/2);
 
-            app.stage.getChildByName("button_backfromcalc").x=window.innerWidth/2 -100;
-            app.stage.getChildByName("button_backfromcalc").y=window.innerHeight-(75/2);
+            app.stage.getChildByName("button_backfromcalc").x=layout.CANVAS_WIDTH/2 -100;
+            app.stage.getChildByName("button_backfromcalc").y=layout.CANVAS_HEIGHT-(75/2);
 
-            app.stage.getChildByName("text_calc2sand").x=window.innerWidth/2 +100+100;
-            app.stage.getChildByName("text_calc2sand").y=window.innerHeight-(75/2) -20;
+            app.stage.getChildByName("text_calc2sand").x=layout.CANVAS_WIDTH/2 +100+100;
+            app.stage.getChildByName("text_calc2sand").y=layout.CANVAS_HEIGHT-(75/2) -20;
 
             //GO TO BUTTONS
-            app.stage.getChildByName("gotoneuron").x=window.innerWidth-720;
-            app.stage.getChildByName("gotoforward").x=window.innerWidth-570;
-            app.stage.getChildByName("gotobackprop").x=window.innerWidth-420;
-            app.stage.getChildByName("gotocalc").x=window.innerWidth-270;
-            app.stage.getChildByName("gotosand").x=window.innerWidth-100;
+            app.stage.getChildByName("gotoneuron").x=layout.CANVAS_WIDTH-720;
+            app.stage.getChildByName("gotoforward").x=layout.CANVAS_WIDTH-570;
+            app.stage.getChildByName("gotobackprop").x=layout.CANVAS_WIDTH-420;
+            app.stage.getChildByName("gotocalc").x=layout.CANVAS_WIDTH-270;
+            app.stage.getChildByName("gotosand").x=layout.CANVAS_WIDTH-100;
 
 
             if(vst.currentSlide!=34){
@@ -391,7 +412,7 @@ export class View{
             } else {
                 app.stage.getChildAt(0).y=changeY/2;
 
-                app.stage.getChildAt(0).getChildAt(2).getChildByName("databox").x=window.innerWidth-260;
+                app.stage.getChildAt(0).getChildAt(2).getChildByName("databox").x=layout.CANVAS_WIDTH-260;
                 app.stage.getChildAt(0).getChildAt(2).getChildByName("databox").y=50 - changeY/2;
 
                 app.stage.getChildAt(0).getChildAt(2).getChildByName("learnbox").y=50-changeY/2;
@@ -407,14 +428,14 @@ export class View{
                 app.stage.getChildAt(0).getChildAt(8).y=-changeY/2+changeY;
 
 
-                if(window.innerWidth>1280) {
-                    app.stage.getChildAt(0).getChildAt(0).x=(window.innerWidth-1280)/2;
-                    app.stage.getChildAt(0).getChildAt(1).x=(window.innerWidth-1280)/2;
-                    app.stage.getChildAt(0).getChildAt(3).x=(window.innerWidth-1280)/2;
-                    app.stage.getChildAt(0).getChildAt(6).x=(window.innerWidth-1280)/2;
+                if(layout.CANVAS_WIDTH>1280) {
+                    app.stage.getChildAt(0).getChildAt(0).x=(layout.CANVAS_WIDTH-1280)/2;
+                    app.stage.getChildAt(0).getChildAt(1).x=(layout.CANVAS_WIDTH-1280)/2;
+                    app.stage.getChildAt(0).getChildAt(3).x=(layout.CANVAS_WIDTH-1280)/2;
+                    app.stage.getChildAt(0).getChildAt(6).x=(layout.CANVAS_WIDTH-1280)/2;
 
-                    app.stage.getChildAt(0).getChildAt(2).getChildByName("buttonNeuronAddContainer").x=(window.innerWidth-1280)/2;
-                    app.stage.getChildAt(0).getChildAt(2).getChildByName("buttonNeuronRemContainer").x=(window.innerWidth-1280)/2;
+                    app.stage.getChildAt(0).getChildAt(2).getChildByName("buttonNeuronAddContainer").x=(layout.CANVAS_WIDTH-1280)/2;
+                    app.stage.getChildAt(0).getChildAt(2).getChildByName("buttonNeuronRemContainer").x=(layout.CANVAS_WIDTH-1280)/2;
                 
                 }
             }   
@@ -690,14 +711,14 @@ export class View{
     // but only some stuff
     resize2(){
 
-        layout.CX= window.innerWidth/2;
-        layout.CY= window.innerHeight/2 -50;
+        layout.CX= layout.CANVAS_WIDTH/2;
+        layout.CY= layout.CANVAS_HEIGHT/2 -50;
 
-        var changeY=window.innerHeight-this.startheight_nochange;
-        var changeX=window.innerWidth-this.startwidth_nochange;
+        var changeY=layout.CANVAS_HEIGHT-this.startheight_nochange;
+        var changeX=layout.CANVAS_WIDTH-this.startwidth_nochange;
 
-        this.app.stage.getChildByName("opener").x=window.innerWidth/2;
-        this.app.stage.getChildByName("opener").y=window.innerHeight/2;
+        this.app.stage.getChildByName("opener").x=layout.CANVAS_WIDTH/2;
+        this.app.stage.getChildByName("opener").y=layout.CANVAS_HEIGHT/2;
 
         if(this.currentSlide!=34){
 
@@ -707,7 +728,7 @@ export class View{
         } else {
             this.app.stage.getChildAt(0).y=changeY/2;
 
-            this.app.stage.getChildAt(0).getChildAt(2).getChildByName("databox").x=window.innerWidth-260;
+            this.app.stage.getChildAt(0).getChildAt(2).getChildByName("databox").x=layout.CANVAS_WIDTH-260;
             this.app.stage.getChildAt(0).getChildAt(2).getChildByName("databox").y=50 - changeY/2;
 
             this.app.stage.getChildAt(0).getChildAt(2).getChildByName("learnbox").y=50-changeY/2;

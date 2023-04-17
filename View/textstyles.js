@@ -4,7 +4,7 @@ export const textstyles = {
     fontFamily: '微软雅黑',
     fontWeight: 400,
     fontSize: 20,
-    fill:0xFFFFFF
+    fill:0x000000
   }),
   
   medium: new PIXI.TextStyle({

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>权重与偏置 | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>权重与偏置</h1>
+        还记得我们说过神经元之间由权重进行连接吗？<br>
+        <br>
+        
+        每个输入值都要乘以一个权重。之后，再将乘以权重后的值求和<br>
+        <br>
+        最后，把求和的结果再加上一个数，我们把这个数叫做——偏置(bias)<br>
+        <br>
+        如果你对某个输入的权重感到好奇，只需要把鼠标放在输入和神经元的连接线上，就可以看到对应的权重<br>
+        <br>
+        蓝色代表权重为正值，橙色代表权重为负值，线越粗代表权重越大，神经元中绿色的值就是我们的计算结果。<br>
+        <br>
+        现在，修改一下权重，看看神经元的计算结果是怎么变化的吧！<br>
+        <br>
+        <div id = "canvascon"> </div>
+        另外需要注意，当我们创建网络时，神经网络的权重是随机数，偏差为0<br>
+        <br>
+        
+        
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../neuron/neuron1.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next">
+            <a href="../neuron/neuron3.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+
+
+
+<!-- <script type="module" src="./src/js/test.js"></script> -->
+<script type="module" src="../../src/js/Controller_n2.js"></script>
+
+
+</html>
+

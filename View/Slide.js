@@ -1,13 +1,13 @@
 // 页面类，页面控件的方法
-import {Button, tintDown, tintOver} from "/View/Button.js"
-import {layout} from "/View/layout.js"
-import {actFns} from "/Model/actfns.js"
-import {data} from "/Model/data.js"
-//import {viewst} from "/Controller.js"
-import {textstyles} from "/View/textstyles.js"
-import { Net } from "/Model/net.js"
-import { Graph } from "/View/Graph.js"
-import { loader } from "/View/View.js"
+import {Button, tintDown, tintOver} from "./Button.js"
+import {layout} from "./layout.js"
+import {actFns} from "../../Model/actfns.js"
+import {data} from "../Model/data.js"
+//import {viewst} from "../Controller.js"
+import {textstyles} from "./textstyles.js"
+import { Net } from "../Model/net.js"
+import { Graph } from "./Graph.js"
+import { loader } from "./View.js"
 
 const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2,      
@@ -426,7 +426,7 @@ export class Slide{
         var epochbox = new PIXI.Sprite(loader.resources["/images/boxes/epochbox.png"].texture);
             epochbox.name="epochbox";
             epochbox.anchor.set(0.5)
-            epochbox.x=window.innerWidth-200;
+            epochbox.x=layout.CANVAS_WIDTH-200;
             epochbox.y=layout.BOTTOMBUFFER-280;
 
         if(slide.sandbox){
@@ -733,7 +733,7 @@ export class Slide{
                 layout.NEURON_X_DIF = 135;
 
 
-                layout.NEURON_LEFTLIM = window.innerWidth/2 - 310;
+                layout.NEURON_LEFTLIM = layout.CANVAS_WIDTH/2 - 310;
 
                 var backpropx_cost= layout.LEFTBUFFER + layout.NEURON_LEFTLIM+layout.NEURON_X_DIF +200;
 
@@ -797,7 +797,7 @@ export class Slide{
                 layout.NEURON_X_DIF = 135;
 
 
-                layout.NEURON_LEFTLIM = window.innerWidth/2 - 310;
+                layout.NEURON_LEFTLIM = layout.CANVAS_WIDTH/2 - 310;
 
                 var backpropx_cost= layout.LEFTBUFFER + layout.NEURON_LEFTLIM+layout.NEURON_X_DIF +200;
 
@@ -834,7 +834,7 @@ export class Slide{
     
     drawDataButtons(graph){
 
-        var newdatax=window.innerWidth-260;
+        var newdatax=layout.CANVAS_WIDTH-260;
         var newdatay= 50
         var slide=this;
         
@@ -1279,15 +1279,17 @@ export class Slide{
                     weightSprite.on('mouseover', function(e){
 
                            var xbuffer=0;
-                        //    var ybuffer=(window.innerHeight-viewst.startheight)/2;
-                            var ybuffer=0;
+                        //    var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
+                           var ybuffer = 0;
                            if(slide.sandbox){
-                               if (window.innerWidth>1280){
-                                var xbuffer=-(window.innerWidth-1280)/2;
+                               if (layout.CANVAS_WIDTH>1280){
+                                var xbuffer=-(layout.CANVAS_WIDTH-1280)/2;
                                }
                            } else {
-                                // var xbuffer=(window.innerWidth-viewst.startwidth)/2;
-                                // var ybuffer=(window.innerHeight-viewst.startheight)/2;
+                                // var xbuffer=(layout.CANVAS_WIDTH-viewst.startwidth)/2;
+                                // var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
+                                var xbuffer = 0;
+                                var ybuffer = 0;
                            }
                         if(!slide.backprop_labels){
 
@@ -1311,15 +1313,17 @@ export class Slide{
                     weightSprite.on('tap', function(e){
 
                         var xbuffer=0;
-                        // var ybuffer=(window.innerHeight-viewst.startheight)/2;
+                        // var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
                         var ybuffer=0;
                         if(slide.sandbox){
-                            if (window.innerWidth>1280){
-                             var xbuffer=-(window.innerWidth-1280)/2;
+                            if (layout.CANVAS_WIDTH>1280){
+                             var xbuffer=-(layout.CANVAS_WIDTH-1280)/2;
                             }
                         } else {
-                            //  var xbuffer=(window.innerWidth-viewst.startwidth)/2;
-                            //  var ybuffer=(window.innerHeight-viewst.startheight)/2;
+                            //  var xbuffer=(layout.CANVAS_WIDTH-viewst.startwidth)/2;
+                            //  var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
+                            var xbuffer=0;
+                            var ybuffer=0;
                         }
                      if(!slide.backprop_labels){
                     
@@ -1464,10 +1468,11 @@ export class Slide{
                     weightSprite.on('mouseover', function(e){
 
                         if (!slide.large_nointeract){
+                        // var xbuffer=(layout.CANVAS_WIDTH-viewst.startwidth)/2;
+                        // var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
+                        var xbuffer=0;
+                        // var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
                         var ybuffer=0;
-                        var ybuffer=0;
-                        // var xbuffer=(window.innerWidth-viewst.startwidth)/2;
-                        // var ybuffer=(window.innerHeight-viewst.startheight)/2;
 
                         this.getChildByName("weightTextBox").visible=true;
                         this.getChildByName("weightTextBox").x=e.data.global.x-xbuffer;
@@ -1489,10 +1494,10 @@ export class Slide{
                     weightSprite.on('tap', function(e){
 
                         if (!slide.large_nointeract){
-                        var xbuffer=0;
-                        var ybuffer=0;
-                        // var xbuffer=(window.innerWidth-viewst.startwidth)/2;
-                        // var ybuffer=(window.innerHeight-viewst.startheight)/2;
+                        // var xbuffer=(layout.CANVAS_WIDTH-viewst.startwidth)/2;
+                        //var ybuffer=(layout.CANVAS_HEIGHT-viewst.startheight)/2;
+                        var xbuffer = 0;
+                        var ybuffer = 0;
 
                         this.getChildByName("weightTextBox").visible=true;
                         this.getChildByName("+").visible=true;
@@ -2414,11 +2419,11 @@ export class Slide{
             costBox.name= "costBox";
             costBox.anchor.set(0.5)
 
-            costBox.x=layout.NEURON_LEFTLIM +300;//window.innerWidth-170;
+            costBox.x=layout.NEURON_LEFTLIM +300;//layout.CANVAS_WIDTH-170;
             costBox.y=layout.NEURON_UPPERLIM + layout.NEURON_Y_DIF/2 +35;     
 
             if(this.sandbox){
-                costBox.x=window.innerWidth-80;
+                costBox.x=layout.CANVAS_WIDTH-80;
                 costBox.y=layout.BOTTOMBUFFER-280;      
             } if(this.costSteps){
                 costBox.x=500;
@@ -2875,10 +2880,10 @@ export class Slide{
     }
 
     drawInteractive(){
-        var interactive = new PIXI.Sprite(PIXI.Texture.from('/images/interactive.png'));
-            interactive.x=layout.CX+400;
-            interactive.y=layout.CY-220;
-        this.textContainer.addChild(interactive);
+        // var interactive = new PIXI.Sprite(PIXI.Texture.from('/images/interactive.png'));
+        //     interactive.x=layout.CX+400;
+        //     interactive.y=layout.CY-220;
+        // this.textContainer.addChild(interactive);
 
     }
 }

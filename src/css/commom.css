@@ -3,12 +3,12 @@ body {
 }
 
 .maintext {
-    font-size: 32px;
+    font-size: 24px;
     font-family: "微软雅黑", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     color: white;
     text-align: left;
 
-    margin: 200px 200px 200px 200px;
+    margin: 200px 700px 200px 150px;
     /* padding: 200px 200px 200px 200px; */
 }
 

@@ -1,15 +1,15 @@
 // 组织了每个页面中的非共有元素
-import { Slide } from "/View/Slide.js"
-import { layout } from "/View/layout.js";
-import { Net } from "/Model/net.js"
-import { actFns } from "/Model/neuron.js";
-import {fruits, fruits_single} from "/Model/data.js"
-import {Graph} from "/View/Graph.js"
-import {textstyles} from "/View/textstyles.js"
-import { Button } from "/View/Button.js";
-//import {viewst} from "../Controller.js"
+import { Slide } from "./Slide.js"
+import { layout } from "./layout.js";
+import { Net } from "../Model/net.js"
+import { actFns } from "../Model/neuron.js";
+import {fruits, fruits_single} from "../Model/data.js"
+import {Graph} from "./Graph.js"
+import {textstyles} from "./textstyles.js"
+import { Button } from "./Button.js";
+// import {viewst} from "../Controller.js"
 
-import { loader } from "/View/View.js";
+import { loader } from "./View.js";
 
 
 
@@ -108,14 +108,14 @@ export function makeSlides(){
     var arrow1 =new PIXI.Sprite(loader.resources["/images/arrows/arrow1.png"].texture);
         arrow1.isSprite=true;
         arrow1.scale.set(0.5);
-        arrow1.x = window.innerWidth-350;
+        // arrow1.x = window.innerWidth-350;
         arrow1.y = 80;
     SlideInstruct2.arrowContainer.addChild(arrow1);
 
     var arrow2 =new PIXI.Sprite(loader.resources["/images/arrows/arrow1.png"].texture);
         arrow2.isSprite=true;
         arrow2.scale.set(0.5);
-        arrow2.x = window.innerWidth-750;
+        // arrow2.x = window.innerWidth-750;
         arrow2.y = 70;
         arrow2.height = 110;
     SlideInstruct2.arrowContainer.addChild(arrow2);
@@ -210,13 +210,13 @@ export function makeSlides(){
         percep_blank.y=layout.CY-150;
 
     var textIntro1b= [percep_blank,
-        [ ["一旦我们的网络完成训练，它就能够用于分辨"], [" 未标注 ", textstyles.ital ], ["的数据."],[layout.CX-450,layout.CY-185]],
-        [["不信？这里有一个已经训练完\n的神经网络，它已经学会了如何分辨"+'\n'],[layout.CX-450,layout.CY-130]],
-        [[" 草莓 ", textstyles.default_red],
-        ["   和   "],
-        [" 蓝莓", textstyles.default_blue],
-        [layout.CX-450,layout.CY-70]],
-        [["快点击图片，看看这个神奇的网络能\n否轻松地帮你解决这个“水果之争”！",textstyles.instruct], [layout.CX-450, layout.CY-20] ],
+        // [ ["一旦我们的网络完成训练，它就能够用于分辨"], [" 未标注 ", textstyles.ital ], ["的数据."],[layout.CX-450,layout.CY-185]],
+        // [["不信？这里有一个已经训练完\n的神经网络，它已经学会了如何分辨"+'\n'],[layout.CX-450,layout.CY-130]],
+        // [[" 草莓 ", textstyles.default_red],
+        // ["   和   "],
+        // [" 蓝莓", textstyles.default_blue],
+        // [layout.CX-450,layout.CY-70]],
+        // [["快点击图片，看看这个神奇的网络能\n否轻松地帮你解决这个“水果之争”！",textstyles.instruct], [layout.CX-450, layout.CY-20] ],
     ];
 
 
@@ -492,17 +492,17 @@ export function makeSlides(){
         fontSize: 16,
     });
 
-    var textNeuron2b = [
-        [["还记得我们说过神经元之间由权重进行连接吗？"], [layout.TEXTSTART_X, layout.TEXTSTART_Y]],
-        [neuron_large_actfncover,["每个输入都乘上一个"],[" 权重. ",textstyles.medium_bold], [layout.CX-470,layout.CY-200]],
-        [["之后，再将乘以权重后的值求和 "], [layout.CX-470,layout.CY-145]],
-       [["最后，把求和的结果再加上一个数，我们把这个数叫做——"], ["偏置(bias)", textstyles.medium_bold], [layout.CX-450,layout.CY-95]],
-        [["如果你对某个输入的权重感到好奇，只需要把鼠标\n放在输入和神经元的连接线上，就可以看到对应的权重.",textstyles.instruct], [layout.CX-470,layout.CY-20]],
-        [["橙色 ",orange], ["代表权重为负值"+'\n',med],
-            ["蓝色 ",blue], ["代表权重为正值",med], [layout.CX-350,layout.CY+35]],
-        [["线越粗代表权重越大，神经元中绿色的值就是我们的计算结果."],[layout.CX-440,layout.CY+130]],
-        [["现在，修改一下权重，看看神经元的计算结果是怎么变化的吧！"],[layout.CX-440,layout.CY+170]],
-        [["另外需要注意，当我们创建网络时，神经网络的权重是随机数，偏置为0"],[layout.CX-440,layout.CY+200]],
+    var textNeuron2b = [neuron_large_actfncover
+    //     [["还记得我们说过神经元之间由权重进行连接吗？"], [layout.TEXTSTART_X, layout.TEXTSTART_Y]],
+    //     [neuron_large_actfncover,["每个输入都乘上一个"],[" 权重. ",textstyles.medium_bold], [layout.CX-470,layout.CY-200]],
+    //     [["之后，再将乘以权重后的值求和 "], [layout.CX-470,layout.CY-145]],
+    //    [["最后，把求和的结果再加上一个数，我们把这个数叫做——"], ["偏置(bias)", textstyles.medium_bold], [layout.CX-450,layout.CY-95]],
+    //     [["如果你对某个输入的权重感到好奇，只需要把鼠标\n放在输入和神经元的连接线上，就可以看到对应的权重.",textstyles.instruct], [layout.CX-470,layout.CY-20]],
+    //     [["橙色 ",orange], ["代表权重为负值"+'\n',med],
+    //         ["蓝色 ",blue], ["代表权重为正值",med], [layout.CX-350,layout.CY+35]],
+    //     [["线越粗代表权重越大，神经元中绿色的值就是我们的计算结果."],[layout.CX-440,layout.CY+130]],
+    //     [["现在，修改一下权重，看看神经元的计算结果是怎么变化的吧！"],[layout.CX-440,layout.CY+170]],
+    //     [["另外需要注意，当我们创建网络时，神经网络的权重是随机数，偏置为0"],[layout.CX-440,layout.CY+200]],
 
 
     
@@ -818,7 +818,7 @@ export function makeSlides(){
 
     //COST 2
     SlideCost2.leftnet=true;
-    layout.NEURON_UPPERLIM = window.innerHeight/2 -140;
+    // layout.NEURON_UPPERLIM = window.innerHeight/2 -140;
 
     var nete = new Net();
     SlideCost2.slideNet=nete;
@@ -847,7 +847,7 @@ export function makeSlides(){
     SlideCost2.drawCost_steps();
     SlideCost2.drawInteractive();
 
-    layout.NEURON_UPPERLIM = window.innerHeight/2 -80;
+    // layout.NEURON_UPPERLIM = window.innerHeight/2 -80;
 
     //COST 3
     var costgraph = new PIXI.Sprite(loader.resources["/images/cost/costgraph.png"].texture);
@@ -1065,15 +1065,15 @@ export function makeSlides(){
     var gotocalc=new Button("gotocalc",loader.resources["/images/buttons/calculus.png"].texture, gotocalcx,gotocalcy,true);
     gotocalc.on('click', function(e){
 
-//            viewst.currentSlide=36;
-//            viewst.drawSlide();
+            // viewst.currentSlide=36;
+            // viewst.drawSlide();
         
     });
 
     gotocalc.on('tap', function(e){
 
-//        viewst.currentSlide=36;
-//        viewst.drawSlide();
+        // viewst.currentSlide=36;
+        // viewst.drawSlide();
     
     });
     SlideCost9.buttonContainer.addChild(gotocalc);
