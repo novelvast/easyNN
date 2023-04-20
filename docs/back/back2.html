@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>权重的更新 | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>权重的更新</h1>
+        我们想要知道的是w3对于总代价值的影响有多大
+        <br><br>
+        我们用代价对W3的偏导数来计算这一影响，记作<img src = "../../images/static/dcdw3.png" width="10%"></img>
+        <br><br>
+        为了找到我们的新w3，我们为我们的每个数据点计算偏导然后取平均值得到<img src = "../../images/static/nablaC.png" width="10%"></img>
+        <br><br>
+        从当前权重中减去<img src = "../../images/static/nablaC.png" width="10%"></img>乘以学习率<img src = "../../images/static/lr.png" width="5%"></img>
+        <br><br>
+        我们更新权重的最具体公式是：
+        <br><br>
+        <img src = "../../images/static/w3new.png" width="100%"></img>
+        <br><br>
+        这一公式是对我们上一章中推导出的公式的具体应用
+        <br><br>
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../back/back1.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next">
+            <a href="../back/back3.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+
+
+
+</html>
+
+

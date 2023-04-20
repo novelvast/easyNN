@@ -527,10 +527,10 @@ export function makeSlides(){
     sigmoid.y=layout.CY-90;
 
     var textNeuron2c = [sigmoid,
-        [ ["求出这个值之后还没有结束，我们还需要把它放到一个函数中，这个函数名叫 "+'\n'], ["激活函数(activation function)", textstyles.large_bold], [layout.CX-480,layout.CY-200]],   
-        [ ["现在，我们使用的激活函数是sigmoid函数，它长这个样子: "], [layout.CX-480,layout.CY-120]],
-        [ ["不仅看起来很有趣，它还能把我们的输出限制在0到1之间 "], [layout.CX-480,layout.CY+170]],
-        [ ["看到图中的紫色数字了吗？那就是我们经过激活函数计算得到的结果"], [layout.CX-480,layout.CY+200]],
+        // [ ["求出这个值之后还没有结束，我们还需要把它放到一个函数中，这个函数名叫 "+'\n'], ["激活函数(activation function)", textstyles.large_bold], [layout.CX-480,layout.CY-200]],   
+        // [ ["现在，我们使用的激活函数是sigmoid函数，它长这个样子: "], [layout.CX-480,layout.CY-120]],
+        // [ ["不仅看起来很有趣，它还能把我们的输出限制在0到1之间 "], [layout.CX-480,layout.CY+170]],
+        // [ ["看到图中的紫色数字了吗？那就是我们经过激活函数计算得到的结果"], [layout.CX-480,layout.CY+200]],
 
     ];
     SlideNeuron4.drawText(textNeuron2c);
@@ -580,10 +580,10 @@ export function makeSlides(){
     SlideNeuron6.drawActFnButtons();
 
     var textNeuron2d2 = [
-        [ ["激活函数非常重要，因为它可以让神经网络\n从简单的线性分类问题转向解决那些更为复杂的"],["非线性问题",textstyles.ital], [layout.CX-470,layout.CY-170]],
-        [ ["简而言之，这允许我们对那些无法用一条线分割的数据进行分类"], [layout.CX-470,layout.CY-90]],   
+        // [ ["激活函数非常重要，因为它可以让神经网络\n从简单的线性分类问题转向解决那些更为复杂的"],["非线性问题",textstyles.ital], [layout.CX-470,layout.CY-170]],
+        // [ ["简而言之，这允许我们对那些无法用一条线分割的数据进行分类"], [layout.CX-470,layout.CY-90]],   
 
-        [ ["现在，让我们来尝试不同的激活函数，看看它们对神经网络的影响吧！"], [layout.CX-420,layout.CY-10]],   
+        // [ ["现在，让我们来尝试不同的激活函数，看看它们对神经网络的影响吧！"], [layout.CX-420,layout.CY-10]],   
     ];
     SlideNeuron6.drawText(textNeuron2d2);
     SlideNeuron6.drawInteractive();
@@ -598,10 +598,10 @@ export function makeSlides(){
     SlideNeuron7.neuronContainer.getChildAt(1).getChildAt(0).visible=true;
 
     var textNeuron2e = [
-        [["我们在应用激活函数" +'\n'+"之后得到的数值"+'\n'+"就是神经网络最终的输出 - "+'\n'],[layout.CX-450,layout.CY-190]],
-       [["         也被叫做它的"], [" activation.  ", textstyles.large_bold],[layout.CX-450,layout.CY-105]],
-       [["在这里，更活跃的神经元是明黄色.",textstyles.instruct], [layout.CX-465,layout.CY-50]],
-       [["把鼠标悬停在神经元上" +'\n'+"来查看它的formula.",textstyles.instruct], [layout.CX-450,layout.CY]],
+    //     [["我们在应用激活函数" +'\n'+"之后得到的数值"+'\n'+"就是神经网络最终的输出 - "+'\n'],[layout.CX-450,layout.CY-190]],
+    //    [["         也被叫做它的"], [" activation.  ", textstyles.large_bold],[layout.CX-450,layout.CY-105]],
+    //    [["在这里，更活跃的神经元是明黄色.",textstyles.instruct], [layout.CX-465,layout.CY-50]],
+    //    [["把鼠标悬停在神经元上" +'\n'+"来查看它的formula.",textstyles.instruct], [layout.CX-450,layout.CY]],
 
     
        /*  [["We can show a neuron's activation "+'\n'
@@ -637,13 +637,13 @@ export function makeSlides(){
 
     var textNet1 = [
         targetarrow,
-        [["因为我们要分成两类,"+'\n'+ "所以在我们的输出层中需要两个最终的神经元. ", textstyles.large_bold], [layout.CX-470,layout.CY-170]],
+        // [["因为我们要分成两类,"+'\n'+ "所以在我们的输出层中需要两个最终的神经元. ", textstyles.large_bold], [layout.CX-470,layout.CY-170]],
         //[["Each output neuron corresponds to a different class."], [layout.LEFTBUFFER+500,170]],
 
         [["当我们的图片是一个"], [" 蓝莓", textstyles.default_blue], [", 我们希望: "], [layout.CX,layout.CY-80]],
         [["这个神经元的值为"], [" 0",textstyles.large_bold], [layout.CX+40,layout.CY-10]],
         [["这个神经元的值为"], [" 1",textstyles.large_bold], [layout.CX+40,layout.CY+40]],
-        [[" 这是我们的"], [" 目标 ", textstyles.large_bold], ["值."], [layout.CX+20,layout.CY+100]],
+        [["图片为草莓时则相反"], [layout.CX+20,layout.CY+100]],
         [["点击图片更换例子.",textstyles.instruct], [layout.CX,layout.CY+150]],
 
     ];
@@ -663,7 +663,7 @@ export function makeSlides(){
     SlideNet2.draw_init(net2);    
 
     var textNet1b = [
-        [["我们可以添加隐藏层..."], [layout.CX+25,layout.CY-150]],
+        // [["我们可以添加隐藏层..."], [layout.CX+25,layout.CY-150]],
     ];
     SlideNet2.drawText(textNet1b);
     SlideNet2.drawTextButtons();
@@ -705,12 +705,12 @@ export function makeSlides(){
     SlideNet3.draw_init(net3);    
 
     var textNet1b2 = [
-        [["我们可以添加隐藏层..."], [layout.CX+25,layout.CY-150]],
-        [["...也可以向每个隐藏层中添加神经元."], [layout.CX+100,layout.CY-100]],
-        [["特别注意前一层的"], [" 输出 ",textstyles.large_bold], [layout.CX+120,layout.CY-50]],
-        [["是怎么转变为下一层的"], [" 输入 ",textstyles.large_bold], ["的. "], [layout.CX+130,layout.CY]],
-        [["这个从输入"+'\n'+ "到最终输出的过程被叫做 "],[layout.CX+140,layout.CY+100]],
-        [["前向传播.",textstyles.large_bold], [layout.CX+140,layout.CY+160]],
+        // [["我们可以添加隐藏层..."], [layout.CX+25,layout.CY-150]],
+        // [["...也可以向每个隐藏层中添加神经元."], [layout.CX+100,layout.CY-100]],
+        // [["特别注意前一层的"], [" 输出 ",textstyles.large_bold], [layout.CX+120,layout.CY-50]],
+        // [["是怎么转变为下一层的"], [" 输入 ",textstyles.large_bold], ["的. "], [layout.CX+130,layout.CY]],
+        // [["这个从输入"+'\n'+ "到最终输出的过程被叫做 "],[layout.CX+140,layout.CY+100]],
+        // [["前向传播.",textstyles.large_bold], [layout.CX+140,layout.CY+160]],
     ];
     SlideNet3.drawText(textNet1b2);
     SlideNet3.drawTextButtons();
@@ -835,11 +835,11 @@ export function makeSlides(){
     
 
     var textNet1e = [
-        [ [" 这里有一个神经网络是如何计算代价的例子."],[layout.CX-470,layout.CY-180] ],
-        [ [" 提示：点击权重可以更改它们，"+'\n'+ " 点击图片可以更换一个新的样例",textstyles.instruct],[layout.CX-450,layout.CY+120] ],
-        [ [" Notice how                    "+'\n'],[" changing the"],[" weights ",textstyles.large_bold],[layout.NEURON_LEFTLIM+450,layout.CY-60] ],
-        [ [" changes the"],[" output   ",textstyles.large_bold],[layout.NEURON_LEFTLIM+450,layout.CY] ],
-        [ [" which changes the"],[" cost. ",textstyles.large_bold],[layout.NEURON_LEFTLIM+450,layout.CY+40] ],
+        // [ [" 这里有一个神经网络是如何计算代价的例子."],[layout.CX-470,layout.CY-180] ],
+        [ [" 提示：点击权重可以更改它们，"+'\n'+ " 点击图片可以更换一个新的样例",textstyles.instruct],[layout.CX-450,layout.CY+180] ],
+        // [ [" Notice how                    "+'\n'],[" changing the"],[" weights ",textstyles.large_bold],[layout.NEURON_LEFTLIM+450,layout.CY-60] ],
+        // [ [" changes the"],[" output   ",textstyles.large_bold],[layout.NEURON_LEFTLIM+450,layout.CY] ],
+        // [ [" which changes the"],[" cost. ",textstyles.large_bold],[layout.NEURON_LEFTLIM+450,layout.CY+40] ],
     ];
    
     SlideCost2.drawText(textNet1e);

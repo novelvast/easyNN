@@ -16,9 +16,7 @@
 
     <!-- 引入PIXI库 -->
     <script type="module" src="/pixi/pixi.min.js"></script>
-    <script>
-        let slide_num = 1;
-    </script>
+
 </head>
 
 
@@ -27,26 +25,32 @@
     <!-- 文字部分 -->
     <div class="maintext">
         <h1>隐藏层</h1>
-        testtext1<br>
-        testtext2<br>
+        好像不太理想……<br>
+        等等，我们是不是忘了什么？
+        <br><br>
+        除输入层和输出层之外，隐藏层也是神经网络中至关重要的一环
+        <br><br>
+        隐藏层位于输入层和输出层之间，隐藏层的存在，让我们的神经网络更加强大和高效。
+        <br><br>
+        复杂的计算过程就发生在“隐藏层”和“输出层”。在“隐藏层”和“输出层”中，神经元们的相互作用和加权计算会帮助我们得到最终的结果。这就好像我们的大脑通过各种神经元之间的连接，进行信息处理和决策一样。
+        <br><br>
+        请看下面这个神经网络：
+        <br><br>
         <div id = "canvascon"> </div>
-        testtext3<br>
-        testtext4<br>
-        testtext3<br>
-        testtext4<br>
-        testtext3<br>
-        testtext4<br>
-        testtext3<br>
-        testtext4<br>
+        <br><br>
+        我们向输入层和输出层之间添加了一个拥有一个神经元的隐藏层
+        <br><br>
+        一个神经网络可以有许多个“隐藏层”，也可以没有隐藏层，但必须有而且只能有一个输入层和一个输出层。
+        <br><br>
     </div>
     
     <!-- 按钮 -->
     <div>
         <button class = "button" id = "button_pre">
-            <a href="./index.html">&lt上一页</a>
+            <a href="../net/net1.html">&lt上一页</a>
         </button>
         <button class = "button" id = "button_next">
-            <a href="./docs/sandbox/sandbox.html">下一页&gt</a>
+            <a href="../net/net3.html">下一页&gt</a>
         </button>
     </div>
     
@@ -66,17 +70,3 @@
 </html>
 
 
-<script>
-    new Vue({
-        el: '#app',
-        data() {
-            return {
-                activeNames: []
-            };
-        },
-    })
-    new Vue({
-        el: '#app2',
-    })
-
-</script>

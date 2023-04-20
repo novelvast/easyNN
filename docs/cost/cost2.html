@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>怎么计算代价函数？ | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>怎么计算代价函数？</h1>
+        请看这个例子：
+        <br><br>
+        <div id = "canvascon"> </div>
+        <br><br>
+        其中，C1和C2就是我们套用上一页中的公式求出上下两个神经元的代价
+        <br><br>
+        将它们求和，就得到了神经网络的总代价值
+        <br><br>
+        注意观察权重是怎样影响输出，进而影响整个神经网络的代价的
+        <br><br>
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../cost/cost1.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next">
+            <a href="../cost/cost3.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+<script type="module" src="../../src/js/Controller_c2.js"></script>
+
+
+</html>
+
+

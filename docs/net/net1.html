@@ -16,9 +16,7 @@
 
     <!-- 引入PIXI库 -->
     <script type="module" src="/pixi/pixi.min.js"></script>
-    <script>
-        let slide_num = 1;
-    </script>
+
 </head>
 
 
@@ -27,26 +25,31 @@
     <!-- 文字部分 -->
     <div class="maintext">
         <h1>输入层与输出层</h1>
-        testtext1<br>
-        testtext2<br>
+        神经元被按照一定的顺序组织在一起，形成了所谓的“层(layer)”。
+        <br><br>
+        最左边的一层就是“输入层”，它负责接收我们的输入
+        <br><br>
+        最右边的一层则是“输出层”，它决定了我们最终的分类结果
+        <br><br>
+        请看下面这个网络，它包含了一个输入层(由两个神经元组成)和一个输出层(由两个神经元组成)：
+        <br><br>
         <div id = "canvascon"> </div>
-        testtext3<br>
-        testtext4<br>
-        testtext3<br>
-        testtext4<br>
-        testtext3<br>
-        testtext4<br>
-        testtext3<br>
-        testtext4<br>
+        <br><br>
+        在输出层中，上面的神经元代表着草莓，下面的神经元代表着蓝莓。数字越大，说明神经网络对自己的判断越有信心
+        <br><br>
+        比如当我们的图片是一个 “蓝莓”时，我们希望下面的神经元输出为0，上面的神经元输出为1
+        <br><br>
+        调整权重让上面为0，下面为1，再点击图片更换一个样例，看看我们的神经网络效果如何？
+        <br><br>
     </div>
     
     <!-- 按钮 -->
     <div>
         <button class = "button" id = "button_pre">
-            <a href="./index.html">&lt上一页</a>
+            <a href="../neuron/neuron5.html">&lt上一页</a>
         </button>
         <button class = "button" id = "button_next">
-            <a href="./docs/sandbox/sandbox.html">下一页&gt</a>
+            <a href="../net/net2.html">下一页&gt</a>
         </button>
     </div>
     
@@ -65,18 +68,3 @@
 
 </html>
 
-
-<script>
-    new Vue({
-        el: '#app',
-        data() {
-            return {
-                activeNames: []
-            };
-        },
-    })
-    new Vue({
-        el: '#app2',
-    })
-
-</script>

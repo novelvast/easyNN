@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>代价函数与输出的关系 | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>代价函数与输出的关系</h1>
+        让我们深入挖掘一下输出值和代价之间的关系吧
+        <br><br>
+        我们可以将输出值和代价的关系画在坐标系中，横坐标是输出值w，纵坐标是对应的代价。
+        <br><br>
+        就像这样：
+        <br><br>
+        <img src = "../../images/static/costgraph.png" width="100%"></img>
+        <br><br>
+        我们的目标是找到一个w的值，使得代价最小。
+        <br><br>
+        虽然这看起来是一个看起来不能再简单的任务，但是，由于神经网络有多个权重和偏置，所以影响代价的变量不止一个，这使得任务变得更加复杂了。
+        <br><br>
+        不过，别担心，反向传播算法会帮助我们解决这个问题！
+        <br><br>
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../cost/cost2.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next">
+            <a href="../cost/cost4.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+
+
+
+</html>
+
+

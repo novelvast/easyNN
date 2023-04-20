@@ -1,2 +1,2 @@
 import {View} from "/View/View.js"
-export const viewst = new View(21);
+export const viewst = new View(19);

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>梯度下降法 | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+
+</head>
+
+
+<body>
+    
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>梯度下降法</h1>
+        神经网络使用一种称为梯度下降法(gradient descent)的算法来调整其权重和偏置以最小化代价
+        <br><br>
+        <img src = "../../images/static/costgraph_point.png" width="100%"></img>
+        <br><br>
+        首先，我们找到当前的权重和代价
+        <br><br>
+        接下来，我们求出这一点的斜率，或者将其称为梯度(gradient)
+        <br><br>
+        为了方便表示，我们把梯度记作<img src = "../../images/static/nablaC.png" width="10%"></img>
+        <br><br>
+        
+        我们的目标是找到最小值，在图中我们可以形象地理解为要向着下坡的方向移动
+        <br><br>
+        <img src = "../../images/static/costgraph_slope1.png" width="100%"></img>
+        <br><br>
+        我们取梯度的相反数
+        <img src = "../../images/static/minnablaC.png" width="10%"></img>
+        ，把它乘上一个数
+        <img src = "../../images/static/lr.png" width="5%"></img>
+        <br><br>
+        乘出来的结果就是我们每次移动的距离
+        <br><br>
+        乘上的这个数我们把它叫做学习率(learning rate)，用<img src = "../../images/static/lr.png" width="5%"></img>表示
+        <br><br>
+        所以最终，我们更新权重的公式是这样的：
+        <br><br>
+        <img src = "../../images/static/wnewform.png" width="100%"></img>
+        <br><br>
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../cost/cost3.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next">
+            <a href="../cost/cost5.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+
+
+
+</html>
+
+

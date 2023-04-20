@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>步骤 | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>步骤</h1>
+        反向传播是神经网络训练的核心算法，也是一种让神经元不断优化的方法。这个过程有三个步骤：
+        <br><br>
+        <h3>1.前向传播</h3>
+        就像我们在上一章所讲的那样。我们向网络输入数据，它按照预先设定的计算规则，计算出输出结果
+        <br><br>
+        <img src = "../../images/static/percep_forward.png" width="50%"></img>
+        <br><br>
+        <h3>2.误差计算</h3>
+        现在我们要比较我们得到的输出和真实值，看看它们相差多少。这一步非常重要，因为它告诉我们我们的神经网络有多“聪明”。
+        <br><br>
+        <img src = "../../images/static/percep_cost.png" width="50%"></img>
+        <br><br>
+        <h3>3.更新 </h3>
+        现在我们知道了我们的网络有多少误差，我们可以利用这个信息来调整神经元的权重和偏置，让我们的结果更接近目标值。
+        <br><br>
+        <img src = "../../images/static/percep_update.png" width="50%"></img>
+        <br><br>
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../backIntro/back_intro1.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next">
+            <a href="../cost/cost1.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+
+
+
+</html>
+
+

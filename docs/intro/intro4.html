@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <title>训练集 | easyNN</title>
+    <link rel="stylesheet" href="/src/css/commom.css">
+
+    <!-- 引入Element-UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 引入PIXI库 -->
+    <script type="module" src="/pixi/pixi.min.js"></script>
+    <script>
+        let slide_num = 1;
+    </script>
+</head>
+
+
+<body>
+
+    <!-- 文字部分 -->
+    <div class="maintext">
+        <h1>训练集</h1>
+        请看这张图，它包含了所有我们用来训练的数据：
+        <br><br>
+        <img src = "../../images/static/intro4_1.jpg" width="40%"></image>
+        <br><br>
+        图中有许多点，红点代表草莓，蓝点代表蓝莓。横坐标代表长度，纵坐标代表圆润程度。
+        <br><br>
+        因为在上一页中我们只为数据定义了这两个属性，所以我们把数据点画在一个二维平面上。
+        <br><br>
+        训练神经网络的过程就像是在寻找一条线，这条线可以完美地来将数据点分成两个部分。
+        <br><br>
+        <img src = "../../images/static/intro4_2.jpg" width="40%"></image>
+        <br><br>
+        如果我们有三个或更多属性，那么训练过程就像是在找寻一个“平面”，将所有的数据点分割开来。它们在本质上是一样的，只是维度增加了而已。
+        <br><br>
+        现在，我们终于可以开始建立我们的神经网络了！
+        <br><br>
+
+    </div>
+    
+    <!-- 按钮 -->
+    <div>
+        <button class = "button" id = "button_pre">
+            <a href="../intro/intro2.html">&lt上一页</a>
+        </button>
+        <button class = "button" id = "button_next" >
+            <a href="../neuron/neuron1.html">下一页&gt</a>
+        </button>
+    </div>
+    
+    <!-- 侧边栏 -->
+
+      
+
+    
+</body>
+
+
+
+
+</html>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                activeNames: []
+            };
+        },
+    })
+    new Vue({
+        el: '#app2',
+    })
+
+</script>
