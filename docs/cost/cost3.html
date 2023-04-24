@@ -8,12 +8,6 @@
     <meta charset="UTF-8">
     <title>代价函数与输出的关系 | easyNN</title>
     <link rel="stylesheet" href="/src/css/commom.css">
-
-    <!-- 引入Element-UI样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-
     <!-- 引入PIXI库 -->
     <script type="module" src="/pixi/pixi.min.js"></script>
 
@@ -21,7 +15,27 @@
 
 
 <body>
-
+<div class="sidebar">目录
+</div>
+<div id="mainmask">
+    <a href="../welcome/welcome1.html">欢迎&gt</a><br>
+    <a href="../welcome/welcome2.html">神经网络&gt</a><br>
+    <a href="../intro/intro1.html">分类问题&gt</a><br>
+    <a href="../intro/intro2.html">样例&gt</a><br>
+    <a href="../intro/intro3.html">特征&gt</a><br>
+    <a href="../intro/intro4.html">训练集&gt</a><br>
+    <a href="../neuron/neuron1.html">神经元&gt</a><br>
+    <a href="../neuron/neuron2.html">权重与偏置&gt</a><br>
+    <a href="../neuron/neuron3.html">激活函数&gt</a><br>
+    <a href="../neuron/neuron5.html">活跃值&gt</a><br>
+    <a href="../net/net1.html">输入层与输出层&gt</a><br>
+    <a href="../net/net2.html">隐藏层&gt</a><br>
+    <a href="../backIntro/back_intro1.html">反向传播&gt</a><br>
+    <a href="../cost/cost1.html">代价函数&gt</a><br>
+    <a href="../cost/cost4.html">梯度下降法与学习率&gt</a><br>
+    <a href="../cost/cost4.html">权重更新&gt</a><br>
+    <a href="../sandbox/sandbox.html">自由尝试&gt</a><br>
+</div>
     <!-- 文字部分 -->
     <div class="maintext">
         <h1>代价函数与输出的关系</h1>
@@ -41,16 +55,27 @@
         <br><br>
     </div>
     
-    <!-- 按钮 -->
-    <div>
-        <button class = "button" id = "button_pre">
-            <a href="../cost/cost2.html">&lt上一页</a>
-        </button>
-        <button class = "button" id = "button_next">
-            <a href="../cost/cost4.html">下一页&gt</a>
-        </button>
+    <div id="PageButton">
+        <div id="PrePageButton" onclick="window.location.replace('../cost/cost2.html');">上一步</div>
+        <div id="NxtPageButton" onclick="window.location.replace('../cost/cost4.html');">下一步</div>
     </div>
     
+    <script>
+        let menv = 0;
+        var sidebar = document.getElementsByClassName('sidebar')[0];
+        var mask = document.getElementById('mainmask');
+        sidebar.onclick = function () {
+            console.log(1);
+            if (menv == 0) {
+                mask.style.display = "block";
+                menv = 1;
+            }
+            else {
+                mask.style.display = "none";
+                menv = 0;
+            }
+        }
+    </script>
     <!-- 侧边栏 -->
 
       

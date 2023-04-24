@@ -107,8 +107,8 @@ export class Slide{
         var actfnsbox = new PIXI.Sprite(loader.resources["/images/boxes/actfnsbox.png"].texture);
             actfnsbox.name="actfnsbox";
             if(this.sandbox){
-            actfnsbox.x=0;
-            actfnsbox.y=155;
+            actfnsbox.x=10;
+            actfnsbox.y=170;
             this.buttonContainer.addChild(actfnsbox);
 
             } else if(this.largefn){
@@ -119,7 +119,7 @@ export class Slide{
             }
 
         var slide=this;
-        actfnsbox.addChild(new Button("sigmoid",loader.resources["/images/buttons/sigmoid.png"].texture, 75,90,true));
+        actfnsbox.addChild(new Button("sigmoid",loader.resources["/images/buttons/sigmoid.png"].texture, 60,75,true));
         actfnsbox.getChildByName("sigmoid").on('click', function(e){
 
             this.setTint(tintDown);
@@ -158,7 +158,7 @@ export class Slide{
 
         });
 
-        actfnsbox.addChild(new Button("relu",loader.resources["/images/buttons/relu.png"].texture, 75, 135,true));
+        actfnsbox.addChild(new Button("relu",loader.resources["/images/buttons/relu.png"].texture, 60, 120,true));
         actfnsbox.getChildByName("relu").on('click', function(e){
 
             this.setTint(tintDown);
@@ -2213,7 +2213,7 @@ export class Slide{
                 typeLabel.y=layout.NEURON_UPPERLIM + (i*layout.NEURON_Y_DIF) + 5;
 
             //target value
-            var targetLabel = new PIXI.Text("target: "+net.target[i],textstyles.medium);
+            var targetLabel = new PIXI.Text("目标值: "+net.target[i],textstyles.medium);
                 targetLabel.name="targetLabel"+i;
                 targetLabel.x=layout.NEURON_LEFTLIM + (net.layers.length-1)*layout.NEURON_X_DIF + 35;
                 targetLabel.y=layout.NEURON_UPPERLIM + (i*layout.NEURON_Y_DIF) + 30;
@@ -2733,7 +2733,7 @@ export class Slide{
                 }
 
                 var textbox = new PIXI.Graphics();
-                textbox.beginFill(0x666666);
+                textbox.beginFill(0xf5f6ff);
                 textbox.drawRoundedRect(text[i][(text[i].length)-1][0]-10,text[i][(text[i].length)-1][1]-10,textwidth+20, textheight+20);
                 textbox.endFill();
 
@@ -2796,7 +2796,7 @@ export class Slide{
             textheight=textheight_temp*lines;
             
             var textbox = new PIXI.Graphics();
-                textbox.beginFill(0x666666);
+                textbox.beginFill(0xf5f6ff);
                 textbox.drawRoundedRect(text[i][(text[i].length)-1][0]-10,text[i][(text[i].length)-1][1]-10,textwidth+20, textheight+20);
                 textbox.endFill();
             this.textContainer.addChild(textbox);       

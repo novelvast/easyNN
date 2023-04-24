@@ -189,7 +189,7 @@ export class data{
 }
 
 
-export const fruits = new data(0,["strawberry","blueberry"],["length", "roundness"]);
+export const fruits = new data(0,["草莓","蓝莓"],["长度", "圆润程度"]);
 fruits.makefruits_linear();
 fruits.shuffle();
 fruits.point_front("blueberry", [2, 10], [0,1]);

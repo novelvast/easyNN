@@ -52,7 +52,7 @@ export const textstyles = {
     fontFamily: 'Helvetica',
     fontWeight: 600,
     fontSize: 16,
-    fill:0xFFFFFF
+    fill:0x000000
   }),
 
   ital: new PIXI.TextStyle({
@@ -67,7 +67,7 @@ export const textstyles = {
     fontFamily: '微软雅黑',
     fontWeight: 600,
     fontSize: 40,
-    fill:0xFFFFFF
+    fill:0x000000
   }),
 
   default_blue: new PIXI.TextStyle({

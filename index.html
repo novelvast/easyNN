@@ -10,11 +10,9 @@
     <meta charset="UTF-8">
     <title>easyNN</title>
     <link rel="stylesheet" href="./src/css/commom.css">
+    <link rel="stylesheet" href="./src/css/homepage.css">
 
-    <!-- 引入Element-UI样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 
     <!-- 引入PIXI库 -->
     <script type="module" src="/pixi/pixi.min.js"></script>
@@ -27,17 +25,22 @@
 <body>
 
     <!-- 文字部分 -->
-    <div class="maintext">
-        <h1>这里有一张欢迎页面</h1>
-        这里有炫酷的动画<br>
+    <div class="CenterText">
+        <br>
+        <br>
+        <h1>easyNN</h1>
+        <h3>an easy introduction to Neural Networks</h3>
+        简单、互动、方便的神经网络科普
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
     
     <!-- 按钮 -->
-    <div>
-
-        <button class = "button" id = "button_start">
-            <a href="./docs/welcome/welcome1.html">开始&gt</a>
-        </button>
+    <div id="PageButton">
+        <div id="PrePageButton" onclick="window.location.replace('./docs/welcome/welcome1.html');">开始</div>
     </div>
     
     <!-- 侧边栏 -->
@@ -49,24 +52,5 @@
 
 
 
-<!-- <script type="module" src="./src/js/test.js"></script> -->
-<script type="module" src="./Controller.js"></script>
-
-
 </html>
 
-
-<script>
-    new Vue({
-        el: '#app',
-        data() {
-            return {
-                activeNames: []
-            };
-        },
-    })
-    new Vue({
-        el: '#app2',
-    })
-
-</script>

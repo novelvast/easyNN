@@ -91,53 +91,7 @@ export function makeSlides(){
 
     /*  ------- INSTRUCTIONS --------*/ 
 
-    // INSTRUCT 1
-    var textInstruct1 = [    
-        [ ["欢迎来到easyNN！", textstyles.large_bold], [layout.TEXTSTART_X, layout.TEXTSTART_Y]],
-        [ ["你玩过chatGPT吗？\n你用过识图软件吗？\n你用过语音识别吗？\n你用过……"], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 100]],
-        [ ["欢如果你的答案是肯定的，那么恭喜你，你已经不知不觉中使用了神经网络来方便你的日常生活。" ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 270]],
-        [ ["那么今天，我们就开始学会神经网络吧！" ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 330]],
-        [ ["别担心，在接下来的介绍中我会尽量使用通俗的语言来讲解，帮助你从零开始搭建\n起一个神经网络并训练它，最终让它帮我们完成分类的任务。" ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 390]],
-    ];    
-    SlideInstruct1.drawText(textInstruct1);
-    
 
-
-    // INSTRUCT 2
-    
-    var arrow1 =new PIXI.Sprite(loader.resources["/images/arrows/arrow1.png"].texture);
-        arrow1.isSprite=true;
-        arrow1.scale.set(0.5);
-        // arrow1.x = window.innerWidth-350;
-        arrow1.y = 80;
-    SlideInstruct2.arrowContainer.addChild(arrow1);
-
-    var arrow2 =new PIXI.Sprite(loader.resources["/images/arrows/arrow1.png"].texture);
-        arrow2.isSprite=true;
-        arrow2.scale.set(0.5);
-        // arrow2.x = window.innerWidth-750;
-        arrow2.y = 70;
-        arrow2.height = 110;
-    SlideInstruct2.arrowContainer.addChild(arrow2);
-
-    var sandbox =new PIXI.Sprite(loader.resources["/images/intro/sandbox.png"].texture);
-        sandbox.isSprite=true;
-        sandbox.anchor.set(0.5);
-        sandbox.x = layout.CX+340;
-        sandbox.y = 210;
-
-    SlideInstruct2.SlideInstructLayers=true;
-    var textInstruct2 = [    
-        [ ["开始之前", textstyles.large_bold], [layout.TEXTSTART_X, layout.TEXTSTART_Y]],
-        [ ["从现在开始，你将会进入一个神奇的世界，学习一种强大的机器学习技术——神经网络。" + "\n" +
-        "神经网络不仅可以像人脑一样学习、思考、识别，还能够处理复杂的数据和模式，从而实现许多智能化的应用。"], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 100]],
-        [ ["在我们的网站上，你将会通过互动式的学习方式，逐步掌握神经网络的基本原理、构造和应用，" + "\n" +
-        "不断挑战自己的学习和创造能力。帮助你深入了解神经网络的工作方式和原理", ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 200]],
-        [ ["无论你是第一次听说神经网络还是资深的机器学习爱好者，我们都欢迎你加入我们" + "\n" +
-        "的大家庭，一起探索神经网络的奥妙和潜力，共同追求知识和技能的进步！", ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 300]],
-        
-    ];    
-    SlideInstruct2.drawText(textInstruct2);
     
 
 
@@ -147,61 +101,16 @@ export function makeSlides(){
 
     // INTRO 1
     
-    var sorter =new PIXI.Sprite(loader.resources["/images/intro/sorter.png"].texture);
-        sorter.isSprite=true;
-        sorter.anchor.set(0.5)
-        sorter.x=layout.CX + 400;
-        sorter.y=layout.CY;
-
-    var textIntro1= [
-        sorter,    
-        [ ["作为人类，对于物体分类这项任务，我们有着得天独厚的优势"], [layout.TEXTSTART_X, layout.TEXTSTART_Y]],
-        [ ["我们可以通过观察、思考和比较轻松地完成这个任务，但是对\n于计算机来说，这似乎是一项棘手的挑战。"], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 50]],
-        [ ["幸好，我们有神经网络。" ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 150]],
-        [ ["神经网络的运作方式和人类的大脑很相似，也能够学习、思考和识别。" ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 200]],
-        [ ["有些神经网络就被训练来帮助我们完成识别和分类数据的任务，从而\n解决了人类难以解决的问题，例如在图像识别、自然语言处理等领域中的应用。" ], [layout.TEXTSTART_X, layout.TEXTSTART_Y + 250]],
-    ];
-    SlideIntro1.drawText(textIntro1);
+    
     
 
     //INTRO 2
     
-    var examples_labels=new PIXI.Sprite(loader.resources["/images/intro/examples_labels.png"].texture);
-        examples_labels.isSprite=true;
-        examples_labels.scale.set(0.75);
-        examples_labels.anchor.set(0.5);
-        examples_labels.x=layout.CX+400;
-        examples_labels.y=layout.CY;
 
-    var textIntro2 = [
-        [["要训练我们自己的神经网络，首先需要准备一些\n样例让它练练手。可别以为神经网络是万能的，\n还是需要我们给它提供正确的分类结果，才能\n知道哪些数据应该被放在哪个盒子里。"], [layout.CX-500, layout.CY-200]],
-        [["这些样例就像是小学生的作业一样，需要打上标\n注，才能让神经网络知道哪些是“老师说过的”，\n哪些是“自己瞎编的”。神经网络会通过这些样\n例进行学习，逐渐掌握如何把数据分类。" ], [layout.CX-500, layout.CY-30]],
-        [["所以，让我们开始准备数据吧！让我们的神经网\n络也像小学生一样“好好学习天天向上”"],[layout.CX-500,layout.CY+150]],
-        examples_labels
-    ];
-    
 
-    SlideIntro2.drawText(textIntro2);
 
     //INTRO 3
-    var captcha=new PIXI.Sprite(loader.resources["/images/intro/captcha.png"].texture);
-        captcha.isSprite=true;
-        captcha.scale.set(1.2);
-        captcha.anchor.set(0.5)
-        captcha.x=layout.CX-360;
-        captcha.y=layout.CY;
-
-    var textIntro3 = [
-        captcha,
-        [["如果你在上网冲浪的时候，不小心遇到了这样一个让人困惑\n的东西，恭喜你！你很可能已经在不知情的情况下，帮助\n神经网络训练提供了标注好的数据。"], [layout.CX+50, layout.TEXTSTART_Y]],
-        [["这些神秘的东西就是我们常说的“验证码”。为了防止恶意程\n序和机器人在网站上乱搞，我们需要通过让用户输入验证\n码的方式进行验证。" ], [layout.CX+50, layout.TEXTSTART_Y + 150]],
-        [["当你输入正确的验证码时，你就帮助了神经网络识别图像或\n声音中的内容，并为之提供了标注好的数据。这样，神经\n网络就可以通过大量的样本学习，不断提高自己的识别\n能力，从而更好地保护网站的安全。"],[layout.CX+50,layout.TEXTSTART_Y + 300]],
-        [["所以，每当你遇到一个验证码，不妨多花点心思，认真输入\n正确的结果，为神经网络提供更准确的数据。说不定哪天\n这个神经网络就能够保护你的账户和个人信息呢！"], [layout.CX+50, layout.TEXTSTART_Y + 450]],
-    ];
-
-    SlideIntro3.drawText(textIntro3);
-    SlideIntro3.drawTextButtons();
-
+    
 
     //INTRO 4
     var percep_blank =new PIXI.Sprite(loader.resources["/images/intro/percep_blank1.png"].texture);
@@ -216,7 +125,7 @@ export function makeSlides(){
         // ["   和   "],
         // [" 蓝莓", textstyles.default_blue],
         // [layout.CX-450,layout.CY-70]],
-        // [["快点击图片，看看这个神奇的网络能\n否轻松地帮你解决这个“水果之争”！",textstyles.instruct], [layout.CX-450, layout.CY-20] ],
+         [["点击图片可以把它传给神经网络"], [layout.CX-450, layout.CY-20] ],
     ];
 
 
@@ -299,116 +208,22 @@ export function makeSlides(){
     SlideIntro4.drawInteractive();
 
     //INTRO 5
-    var example_blue=new PIXI.Sprite(loader.resources["/images/intro/input_example.png"].texture);
-        example_blue.isSprite=true;
-        example_blue.scale.set(0.9);
-        example_blue.anchor.set(0.5);
-        example_blue.x= layout.CX+200;
-        example_blue.y= layout.CY;
-
-    var textIntro3a = [
-        example_blue,
-        [["首先，让我们来揭开一个谜团：怎样才能让电脑\n看懂图片呢？\n答案是——数字！"], [layout.CX-500, layout.TEXTSTART_Y]],
-        [["没错，有些神经网络可以通过像素来识别图片。\n对于我们的神经网络而言，我们需要为数据分\n配一些关键属性，以便让网络来识别这些数据。" ], [layout.CX-500, layout.TEXTSTART_Y + 150]],
-        [["比如，我们想让神经网络区分草莓和蓝莓。那么，\n我们可以给这些水果标上两个属性：长度和\n圆润程度。草莓通常比蓝莓长而尖，而蓝莓则\n更加短而圆润。把这些属性数字化之后，神经\n网络就能够通过这些数字来判断水果的种类了！"],[layout.CX-500,layout.TEXTSTART_Y + 300]],
-        [["当然，属性的选择不是唯一的，可以根据实际情\n况选择更多更准确的属性来让网络进行分类识别。" ], [layout.CX-500, layout.TEXTSTART_Y + 500]],
-    ];
-
-    SlideIntro5.drawText(textIntro3a);
+   
 
     //INTRO 6
-    var SlideIntroGraph = new Graph(fruits);
-    SlideIntro6.labelsContainer.addChild(SlideIntroGraph.getGraph());
-    SlideIntro6.labelsContainer.getChildByName("axis").scale.set(1.2);
-
-    SlideIntro6.labelsContainer.getChildByName("axis").x=layout.CX-460;
-    SlideIntro6.labelsContainer.getChildByName("axis").y=layout.CY-130;
-
-      var textIntro4a = [
-        [["这张图包含了所有我们用来训练的数据",textstyles.large_bold], [layout.TEXTSTART_X,layout.TEXTSTART_Y]],
-        [["图中有许多点，红点代表草莓，蓝点代表蓝莓。横坐标代表长度，纵坐标代表圆润程度",], [layout.TEXTSTART_X,layout.TEXTSTART_Y + 60]],
-        [["因为在上一页中我们只为数据定义了这两个属性，\n所以我们可以把所有数据点画在一个二维平面上。"], [layout.CX-70,layout.CY-130]],
-        [["训练神经网络的过程就像是在寻找一条线，这条线" + "\n" +
-          "可以完美地来将数据点分成两个部分。如果我们有" + "\n" +
-          "三个或更多属性，那么训练过程就像是在找寻一个" + "\n" +
-          "“平面”，将所有的数据点分割开来。它们在本质上" + "\n" +
-          "是一样的，只是维度增加了而已。"], [layout.CX-70,layout.CY-30]],
-        [["现在，我们可以开始建立我们的神经网络了，让它帮我们处理这些数据吧", textstyles.large_bold], [layout.TEXTSTART_X,layout.CY+230]],
-
-    ];
-    SlideIntro6.drawText(textIntro4a);
+    
 
     //INTRO 7
-    var percep_labels =new PIXI.Sprite(loader.resources["/images/intro/percep_labels.png"].texture);
-        percep_labels.isSprite=true;
-        percep_labels.anchor.set(0.5);
-        percep_labels.x=layout.CX-100;
-        percep_labels.y=layout.CY;
 
-    var textNeuronA = [
-        [["就像我们的大脑一样，神经网络也由许多神经元组成"], [ layout.CX+150, layout.TEXTSTART_Y + 100]],
-        [["这些神经元之间是通过权重(weight)连接起来的，类似\n于我们的大脑中神经元之间的连接。"], [ layout.CX+150, layout.TEXTSTART_Y + 200]],
-        [["这些权重可以被看作是神经元之间的“力量”，影响着它\n们如何相互作用。所以，就像大脑中神经元的\n联系一样，神经网络中神经元之间的权重连接也至关重要！"], [ layout.CX+150, layout.TEXTSTART_Y + 300]],
-        percep_labels,
-
-    ];
-
-    SlideIntro7.drawText(textNeuronA);
-    SlideIntro7.drawTextButtons();
 
     //INTRO 8
-    var percep_layers =new PIXI.Sprite(loader.resources["/images/intro/percep_layers.png"].texture);
-        percep_layers.isSprite=true;
-        percep_layers.anchor.set(0.5);
-        percep_layers.x=layout.CX-150;
-        percep_layers.y=layout.CY;
 
-    var textNeuronA2 = [
-        percep_layers,
-        [["神经元被按照一定的顺序组织在一起，形成了所谓的"], ["“层(layer)”",textstyles.large_bold], [ layout.CX+50, layout.TEXTSTART_Y + 100]],
-        [["最左边的一层就是“输入层”，它负责接收我们的输入" + "\n" +
-          "最右边的一层则是“输出层”，它决定了我们最终的分类结果。" + "\n" +
-          "而夹在中间的一些层，我们称之为“隐藏层”，它们的神秘性就" + "\n" +
-          "如同蒙着一层神秘的面纱，不为人所知。不过这些隐藏层的存" + "\n" +
-          "在，让我们的神经网络更加强大和高效。"],[layout.CX+50,layout.TEXTSTART_Y + 150]],
-
-        [["复杂的计算过程就发生在“隐藏层”和“输出层”。在“隐藏层”和" + "\n" +
-          "“输出层”中，神经元们的相互作用和加权计算会帮助我们得到最" + "\n" +
-          "终的结果。这就好像我们的大脑通过各种神经元之间的连接，进" + "\n" +
-          "行信息处理和决策一样。"],[layout.CX+50,layout.TEXTSTART_Y+300]],
-
-
-        [["一个神经网络可以有许多个“隐藏层”，也可以没有隐藏层，但必" + "\n" +
-        "须有而且只能有一个输入层和一个输出层。"],[layout.CX+50,layout.TEXTSTART_Y+450]]
-    ];
-
-    SlideIntro8.drawText(textNeuronA2);
-    SlideIntro8.drawTextButtons();
 
 
     /*  ------- NEURON --------*/ 
 
     // NEURON 1
-    var neuron_example3=new PIXI.Sprite(loader.resources["/images/intro/neuron_example3.png"].texture);
-        neuron_example3.scale.set(0.65);
-        neuron_example3.anchor.set(0.5);
 
-        neuron_example3.isSprite=true;
-        neuron_example3.x=layout.CX+80;
-        neuron_example3.y=layout.CY;
-
-    var textNeuron1b = [
-        neuron_example3,
-        [ ["你应该已经对神经网络有了一个大概的了解，接下来我们来具体看看神经元" ], [ layout.CX-470, layout.TEXTSTART_Y] ],
-        [ ["这里有一个神经元. ", textstyles.large_bold], [ layout.CX-470, layout.CY-180]],
-        [ ["一个神经元的计算过程是相当简单的：" + "\n" +
-        "它接收一些输入(每个输入都是单个数字)，" + "\n" +
-        "然后进行一些数学运算，" + "\n" +
-        "最后输出一个结果，" + "\n" +
-        "这个结果代表着神经网络对输入的理解和判断。" ], [ layout.CX+300, layout.CY+120] ],
-
-    ];
-    SlideNeuron1.drawText(textNeuron1b);
 
     //NEUROON 2 
     SlideNeuron2.largenet=1;
@@ -426,7 +241,7 @@ export function makeSlides(){
 
     const train_data2 = {
         points: [train_input2],
-        labels: ["length", "roundness"],
+        labels: ["长度", "圆润程度"],
         type: ["blueberry"]
     }
 
@@ -444,16 +259,16 @@ export function makeSlides(){
 
     var inputexample=new PIXI.Sprite(loader.resources["/images/intro/input_example.png"].texture);
         inputexample.isSprite=true;
-        inputexample.scale.set(0.7);
-        inputexample.x= layout.CX-380;
-        inputexample.y= layout.CY-170;
+        inputexample.scale.set(1.0);
+        inputexample.x= layout.CX-350;
+        inputexample.y= layout.CY-150;
 
     var textNeuron2 = [
         neuron_large_over,
         inputexample,
         [["我们每次给我们的网络提供一条训练数据"], [layout.CX-480,layout.CY-200]],
         [["用我们之前定义的长度和" + "\n" +
-        "圆润程度作为我们的 "], ["输入", textstyles.large], [layout.CX-480,layout.CY+160]],
+        "圆润程度作为我们的输入"], [layout.CX-480,layout.CY+160]],
     ];
 
     SlideNeuron2.drawText(textNeuron2);
@@ -492,17 +307,17 @@ export function makeSlides(){
         fontSize: 16,
     });
 
-    var textNeuron2b = [neuron_large_actfncover
+    var textNeuron2b = [neuron_large_actfncover,
     //     [["还记得我们说过神经元之间由权重进行连接吗？"], [layout.TEXTSTART_X, layout.TEXTSTART_Y]],
     //     [neuron_large_actfncover,["每个输入都乘上一个"],[" 权重. ",textstyles.medium_bold], [layout.CX-470,layout.CY-200]],
     //     [["之后，再将乘以权重后的值求和 "], [layout.CX-470,layout.CY-145]],
     //    [["最后，把求和的结果再加上一个数，我们把这个数叫做——"], ["偏置(bias)", textstyles.medium_bold], [layout.CX-450,layout.CY-95]],
-    //     [["如果你对某个输入的权重感到好奇，只需要把鼠标\n放在输入和神经元的连接线上，就可以看到对应的权重.",textstyles.instruct], [layout.CX-470,layout.CY-20]],
-    //     [["橙色 ",orange], ["代表权重为负值"+'\n',med],
-    //         ["蓝色 ",blue], ["代表权重为正值",med], [layout.CX-350,layout.CY+35]],
-    //     [["线越粗代表权重越大，神经元中绿色的值就是我们的计算结果."],[layout.CX-440,layout.CY+130]],
-    //     [["现在，修改一下权重，看看神经元的计算结果是怎么变化的吧！"],[layout.CX-440,layout.CY+170]],
-    //     [["另外需要注意，当我们创建网络时，神经网络的权重是随机数，偏置为0"],[layout.CX-440,layout.CY+200]],
+         [["把鼠标放在输入和神经元的连\n接线上，就可以看到对应的权重"], [layout.CX-470,layout.CY-60]],
+         [["橙色 ",orange], ["代表权重为负值"+'\n',med],
+             ["蓝色 ",blue], ["代表权重为正值",med], [layout.CX-350,layout.CY+35]],
+         [["线越粗代表权重越大"],[layout.CX-440,layout.CY+130]],
+         [["点击加减号可以修改权重"],[layout.CX-400,layout.CY+200]],
+         [["神经元中绿色的值就是我们的计算结果"],[layout.CX+140,layout.CY+200]],
 
 
     
@@ -528,9 +343,9 @@ export function makeSlides(){
 
     var textNeuron2c = [sigmoid,
         // [ ["求出这个值之后还没有结束，我们还需要把它放到一个函数中，这个函数名叫 "+'\n'], ["激活函数(activation function)", textstyles.large_bold], [layout.CX-480,layout.CY-200]],   
-        // [ ["现在，我们使用的激活函数是sigmoid函数，它长这个样子: "], [layout.CX-480,layout.CY-120]],
+         [ ["sigmoid函数: "], [layout.CX-480,layout.CY-120]],
         // [ ["不仅看起来很有趣，它还能把我们的输出限制在0到1之间 "], [layout.CX-480,layout.CY+170]],
-        // [ ["看到图中的紫色数字了吗？那就是我们经过激活函数计算得到的结果"], [layout.CX-480,layout.CY+200]],
+         [ ["紫色数字是我们经过激活函数计算得到的结果"], [layout.CX + 100,layout.CY+230]],
 
     ];
     SlideNeuron4.drawText(textNeuron2c);
@@ -583,7 +398,7 @@ export function makeSlides(){
         // [ ["激活函数非常重要，因为它可以让神经网络\n从简单的线性分类问题转向解决那些更为复杂的"],["非线性问题",textstyles.ital], [layout.CX-470,layout.CY-170]],
         // [ ["简而言之，这允许我们对那些无法用一条线分割的数据进行分类"], [layout.CX-470,layout.CY-90]],   
 
-        // [ ["现在，让我们来尝试不同的激活函数，看看它们对神经网络的影响吧！"], [layout.CX-420,layout.CY-10]],   
+         [ ["尝试不同的激活函数，看看\n它们对神经网络的影响吧！"], [layout.CX-420,layout.CY-10]],   
     ];
     SlideNeuron6.drawText(textNeuron2d2);
     SlideNeuron6.drawInteractive();
@@ -600,14 +415,9 @@ export function makeSlides(){
     var textNeuron2e = [
     //     [["我们在应用激活函数" +'\n'+"之后得到的数值"+'\n'+"就是神经网络最终的输出 - "+'\n'],[layout.CX-450,layout.CY-190]],
     //    [["         也被叫做它的"], [" activation.  ", textstyles.large_bold],[layout.CX-450,layout.CY-105]],
-    //    [["在这里，更活跃的神经元是明黄色.",textstyles.instruct], [layout.CX-465,layout.CY-50]],
-    //    [["把鼠标悬停在神经元上" +'\n'+"来查看它的formula.",textstyles.instruct], [layout.CX-450,layout.CY]],
+        [["更活跃的神经元是更亮的黄色"], [layout.CX-465,layout.CY-50]],
+        [["把鼠标放在神经元上可以查看具体的计算过程"], [layout.CX+100,layout.CY + 200]],
 
-    
-       /*  [["We can show a neuron's activation "+'\n'
-        +"through its color - more active neurons" +'\n'+ "are a brighter yellow.", textstyles.instruct], [layout.CX-450,layout.CY]],
-        [["Hover your mouse over the neuron" +'\n'+"to view its formula.",textstyles.instruct], [layout.CX-450,layout.CY+100]],
-        */    
     ];
     SlideNeuron7.drawText(textNeuron2e);
     SlideNeuron7.drawTextButtons();
