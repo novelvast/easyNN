@@ -107,8 +107,8 @@ export class Slide{
         var actfnsbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/actfnsbox.png"].texture);
             actfnsbox.name="actfnsbox";
             if(this.sandbox){
-            actfnsbox.x=10;
-            actfnsbox.y=170;
+            actfnsbox.x=0;
+            actfnsbox.y=155;
             this.buttonContainer.addChild(actfnsbox);
 
             } else if(this.largefn){
@@ -119,7 +119,7 @@ export class Slide{
             }
 
         var slide=this;
-        actfnsbox.addChild(new Button("sigmoid",loader.resources["/easyNN/images/buttons/sigmoid.png"].texture, 60,75,true));
+        actfnsbox.addChild(new Button("sigmoid",loader.resources["/easyNN/images/buttons/sigmoid.png"].texture, 75,90,true));
         actfnsbox.getChildByName("sigmoid").on('click', function(e){
 
             this.setTint(tintDown);
@@ -158,7 +158,7 @@ export class Slide{
 
         });
 
-        actfnsbox.addChild(new Button("relu",loader.resources["/easyNN/images/buttons/relu.png"].texture, 60, 120,true));
+        actfnsbox.addChild(new Button("relu",loader.resources["/easyNN/images/buttons/relu.png"].texture, 75, 135,true));
         actfnsbox.getChildByName("relu").on('click', function(e){
 
             this.setTint(tintDown);
