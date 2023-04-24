@@ -92,14 +92,14 @@ export class View{
         document.getElementById("canvascon").appendChild(this.app.view);
         // document.body.appendChild(this.app.view);
 
-        // var opener = new PIXI.Sprite(PIXI.Texture.from('/images/opener.png'));
+        // var opener = new PIXI.Sprite(PIXI.Texture.from('/easyNN/images/opener.png'));
         //     opener.name="opener";
         //     opener.anchor.set(0.5);
         //     opener.x=layout.CANVAS_WIDTH/2;
         //     opener.y=layout.CANVAS_HEIGHT/2;
         // this.app.stage.addChild(opener);
 
-        var loading = new PIXI.Sprite(PIXI.Texture.from('/images/loading.png'));
+        var loading = new PIXI.Sprite(PIXI.Texture.from('/easyNN/images/loading.png'));
             loading.name="loading";
             loading.anchor.set(0.5);
             loading.x=layout.CANVAS_WIDTH/2;
@@ -109,181 +109,181 @@ export class View{
         //lol
         loader
             .add([
-                //SLIDE /imageS
-                "/images/interactive.png",
-                "/images/net/neuron.png",
-                "/images/net/overneuron2.png",
-                "/images/net/neuron_backprop.png",
-                "/images/net/neuron_large.png",
-                "/images/net/inputbase.png",
-                "/images/backprop/in1.png",
-                "/images/backprop/in2.png",
-                "/images/backprop/y1.png",
-                "/images/backprop/y2.png",
-                "/images/backprop/c1form.png",
-                "/images/backprop/c2form.png",
-                "/images/net/strawberrycard.png",
-                "/images/net/blueberrycard.png",
-                "/images/cost/cost1box.png",
-                "/images/cost/cost2box.png",
-                "/images/cost/costplus.png",
-                "/images/backprop/cplus2.png",
+                //SLIDE /easyNN/images
+                "/easyNN/images/interactive.png",
+                "/easyNN/images/net/neuron.png",
+                "/easyNN/images/net/overneuron2.png",
+                "/easyNN/images/net/neuron_backprop.png",
+                "/easyNN/images/net/neuron_large.png",
+                "/easyNN/images/net/inputbase.png",
+                "/easyNN/images/backprop/in1.png",
+                "/easyNN/images/backprop/in2.png",
+                "/easyNN/images/backprop/y1.png",
+                "/easyNN/images/backprop/y2.png",
+                "/easyNN/images/backprop/c1form.png",
+                "/easyNN/images/backprop/c2form.png",
+                "/easyNN/images/net/strawberrycard.png",
+                "/easyNN/images/net/blueberrycard.png",
+                "/easyNN/images/cost/cost1box.png",
+                "/easyNN/images/cost/cost2box.png",
+                "/easyNN/images/cost/costplus.png",
+                "/easyNN/images/backprop/cplus2.png",
 
-                //ALL SLIDES /imageS
+                //ALL SLIDES /easyNN/images
                 //view buttons
-                "/images/buttons/back.png",
-                "/images/buttons/next.png",
-                "/images/buttons/start.png",
-                "/images/buttons/gotoneuron.png",
-                "/images/buttons/gotoforward.png",
-                "/images/buttons/gotobackprop.png",
-                "/images/buttons/gotocalc.png",
-                "/images/buttons/sand.png",
-                "/images/buttons/home.png",
+                "/easyNN/images/buttons/back.png",
+                "/easyNN/images/buttons/next.png",
+                "/easyNN/images/buttons/start.png",
+                "/easyNN/images/buttons/gotoneuron.png",
+                "/easyNN/images/buttons/gotoforward.png",
+                "/easyNN/images/buttons/gotobackprop.png",
+                "/easyNN/images/buttons/gotocalc.png",
+                "/easyNN/images/buttons/sand.png",
+                "/easyNN/images/buttons/home.png",
 
 
                 //slide buttons
-                "/images/boxes/learnbox.png",
-                "/images/boxes/actfnsbox.png",
-                "/images/boxes/layersbox.png",
-                "/images/boxes/epochbox.png",
-                "/images/boxes/ratebox.png",
-                "/images/boxes/databox.png",
-                "/images/boxes/cost.png",
+                "/easyNN/images/boxes/learnbox.png",
+                "/easyNN/images/boxes/actfnsbox.png",
+                "/easyNN/images/boxes/layersbox.png",
+                "/easyNN/images/boxes/epochbox.png",
+                "/easyNN/images/boxes/ratebox.png",
+                "/easyNN/images/boxes/databox.png",
+                "/easyNN/images/boxes/cost.png",
 
-                "/images/buttons/step.png",
-                "/images/buttons/learn.png",
-                "/images/buttons/reset.png",
-                "/images/buttons/pause.png",
-                "/images/buttons/sigmoid.png",
-                "/images/buttons/relu.png",
-                "/images/buttons/button_layer.png",
-                "/images/buttons/button_removelayer.png",
-                "/images/buttons/button_addneuron.png",
-                "/images/buttons/button_removeneuron.png",
-                "/images/buttons/plus.png",
-                "/images/buttons/minus.png",
-                "/images/buttons/datalin.png",
-                "/images/buttons/datacircle.png",
+                "/easyNN/images/buttons/step.png",
+                "/easyNN/images/buttons/learn.png",
+                "/easyNN/images/buttons/reset.png",
+                "/easyNN/images/buttons/pause.png",
+                "/easyNN/images/buttons/sigmoid.png",
+                "/easyNN/images/buttons/relu.png",
+                "/easyNN/images/buttons/button_layer.png",
+                "/easyNN/images/buttons/button_removelayer.png",
+                "/easyNN/images/buttons/button_addneuron.png",
+                "/easyNN/images/buttons/button_removeneuron.png",
+                "/easyNN/images/buttons/plus.png",
+                "/easyNN/images/buttons/minus.png",
+                "/easyNN/images/buttons/datalin.png",
+                "/easyNN/images/buttons/datacircle.png",
 
                 //graph
-                "/images/graph/axis.png",
-                "/images/graph/axis_neg.png",
-                "/images/graph/bgtest.png",
-                "/images/graph/point.png",
-                "/images/graph/graph.png",
+                "/easyNN/images/graph/axis.png",
+                "/easyNN/images/graph/axis_neg.png",
+                "/easyNN/images/graph/bgtest.png",
+                "/easyNN/images/graph/point.png",
+                "/easyNN/images/graph/graph.png",
 
 
                 
 
                 //intro
-                "/images/arrows/arrow1.png",
+                "/easyNN/images/arrows/arrow1.png",
 
-                "/images/intro/sandbox.png",
-                "/images/intro/sorter.png",
-                "/images/intro/examples_labels.png",
-                "/images/intro/captcha.png",
-                "/images/intro/percep_blank1.png",
-                "/images/intro/singleblue.png",
-                "/images/intro/singlestraw.png",
-                "/images/intro/percep_blue1.png",
-                "/images/intro/percep_straw1.png",
-                "/images/intro/input_example.png",
-                "/images/intro/percep_labels.png",
-                "/images/intro/percep_layers.png",
+                "/easyNN/images/intro/sandbox.png",
+                "/easyNN/images/intro/sorter.png",
+                "/easyNN/images/intro/examples_labels.png",
+                "/easyNN/images/intro/captcha.png",
+                "/easyNN/images/intro/percep_blank1.png",
+                "/easyNN/images/intro/singleblue.png",
+                "/easyNN/images/intro/singlestraw.png",
+                "/easyNN/images/intro/percep_blue1.png",
+                "/easyNN/images/intro/percep_straw1.png",
+                "/easyNN/images/intro/input_example.png",
+                "/easyNN/images/intro/percep_labels.png",
+                "/easyNN/images/intro/percep_layers.png",
 
                 //neuron
-                "/images/intro/neuron_example3.png",
-                "/images/net/neuronOver_large.png",
-                "/images/net/neuron_large_actfncover.png",
-                "/images/intro/sigmoid_graph.png",
-                "/images/intro/relu_graph.png",
-                "/images/arrows/targetarrow.png",
+                "/easyNN/images/intro/neuron_example3.png",
+                "/easyNN/images/net/neuronOver_large.png",
+                "/easyNN/images/net/neuron_large_actfncover.png",
+                "/easyNN/images/intro/sigmoid_graph.png",
+                "/easyNN/images/intro/relu_graph.png",
+                "/easyNN/images/arrows/targetarrow.png",
 
                 //cost
-                "/images/cost/percep_forward.png",
-                "/images/cost/percep_cost.png",
-                "/images/cost/percep_update.png",
-                "/images/cost/costformwb2.png",
-                "/images/cost/costgraph.png",
-                "/images/cost/costgraph_point.png",
-                "/images/cost/nablaC.png",
-                "/images/cost/costgraph_slope1.png",
-                "/images/cost/minnablaC.png",
-                "/images/cost/lr.png",
-                "/images/cost/wnewform.png",
-                "/images/cost/costgraph_slope2.png",
-                "/images/cost/costgraph_lrsmall.png",
-                "/images/cost/costgraph_lrlarge.png",
-                "/images/arrows/gotocalcarrow.png",
-                "/images/buttons/calculus.png",
-                "/images/arrows/learnboxarrows.png",
-                "/images/backprop/dxdy/dadz21.png",
-                "/images/backprop/dxdy/dcda21.png",
-                "/images/backprop/dxdy/dcdw3.png",
-                "/images/backprop/dxdy/w3_new.png",
+                "/easyNN/images/cost/percep_forward.png",
+                "/easyNN/images/cost/percep_cost.png",
+                "/easyNN/images/cost/percep_update.png",
+                "/easyNN/images/cost/costformwb2.png",
+                "/easyNN/images/cost/costgraph.png",
+                "/easyNN/images/cost/costgraph_point.png",
+                "/easyNN/images/cost/nablaC.png",
+                "/easyNN/images/cost/costgraph_slope1.png",
+                "/easyNN/images/cost/minnablaC.png",
+                "/easyNN/images/cost/lr.png",
+                "/easyNN/images/cost/wnewform.png",
+                "/easyNN/images/cost/costgraph_slope2.png",
+                "/easyNN/images/cost/costgraph_lrsmall.png",
+                "/easyNN/images/cost/costgraph_lrlarge.png",
+                "/easyNN/images/arrows/gotocalcarrow.png",
+                "/easyNN/images/buttons/calculus.png",
+                "/easyNN/images/arrows/learnboxarrows.png",
+                "/easyNN/images/backprop/dxdy/dadz21.png",
+                "/easyNN/images/backprop/dxdy/dcda21.png",
+                "/easyNN/images/backprop/dxdy/dcdw3.png",
+                "/easyNN/images/backprop/dxdy/w3_new.png",
 
-                "/images/backprop/dxdy/dzdw1.png",
-                "/images/backprop/dxdy/dadz11.png",
-                "/images/backprop/dxdy/dcda11.png",
-                "/images/backprop/dxdy/dcdw1.png",
-                "/images/backprop/dxdy/w1_new.png",
+                "/easyNN/images/backprop/dxdy/dzdw1.png",
+                "/easyNN/images/backprop/dxdy/dadz11.png",
+                "/easyNN/images/backprop/dxdy/dcda11.png",
+                "/easyNN/images/backprop/dxdy/dcdw1.png",
+                "/easyNN/images/backprop/dxdy/w1_new.png",
 
                 //backprop
-                "/images/backprop/w2.png",
-                "/images/backprop/w4_teal.png",
-                "/images/backprop/a21.png",
-                "/images/backprop/y.png",
-                "/images/backprop/C.png",
-                "/images/backprop/arrows/w3toc.png",
-                "/images/backprop/dctot.png",
-                "/images/backprop/w3_teal.png",
-                "/images/backprop/w3new.png",
-                "/images/backprop/arrows/w3all.png",
-                "/images/backprop/dxdy/dzdw3.png",       
-                "/images/backprop/z21.png",
-                "/images/backprop/dadz21.png",
-                "/images/backprop/dcda21.png",
-                "/images/backprop/ctot.png",
-                "/images/backprop/dcdw3.png",
-                "/images/backprop/dz21dw3_form.png",
-                "/images/backprop/b21.png",
-                "/images/backprop/arrows/w3toz.png",
-                "/images/backprop/arrows/ztoa.png",
-                "/images/backprop/da21dz_form.png",
-                "/images/backprop/arrows/a21toc.png",
-                "/images/backprop/dcda12_form.png",
-                "/images/backprop/dctotfinal_form.png",
+                "/easyNN/images/backprop/w2.png",
+                "/easyNN/images/backprop/w4_teal.png",
+                "/easyNN/images/backprop/a21.png",
+                "/easyNN/images/backprop/y.png",
+                "/easyNN/images/backprop/C.png",
+                "/easyNN/images/backprop/arrows/w3toc.png",
+                "/easyNN/images/backprop/dctot.png",
+                "/easyNN/images/backprop/w3_teal.png",
+                "/easyNN/images/backprop/w3new.png",
+                "/easyNN/images/backprop/arrows/w3all.png",
+                "/easyNN/images/backprop/dxdy/dzdw3.png",       
+                "/easyNN/images/backprop/z21.png",
+                "/easyNN/images/backprop/dadz21.png",
+                "/easyNN/images/backprop/dcda21.png",
+                "/easyNN/images/backprop/ctot.png",
+                "/easyNN/images/backprop/dcdw3.png",
+                "/easyNN/images/backprop/dz21dw3_form.png",
+                "/easyNN/images/backprop/b21.png",
+                "/easyNN/images/backprop/arrows/w3toz.png",
+                "/easyNN/images/backprop/arrows/ztoa.png",
+                "/easyNN/images/backprop/da21dz_form.png",
+                "/easyNN/images/backprop/arrows/a21toc.png",
+                "/easyNN/images/backprop/dcda12_form.png",
+                "/easyNN/images/backprop/dctotfinal_form.png",
 
-                "/images/backprop/arrows/biasarrow.png",
-                "/images/backprop/dcdb.png",
-                "/images/backprop/dcdb_final.png",
-                "/images/backprop/dzdb.png",
-                "/images/backprop/w1_teal.png",
-                "/images/backprop/dcdw1.png",
-                "/images/backprop/dz1dw1.png",
-                "/images/backprop/da1dz1.png",
-                "/images/backprop/arrows/w1all.png",
-                "/images/backprop/dcda11.png",
-                "/images/backprop/a11.png",
-                "/images/backprop/z11.png",
-                "/images/backprop/a22.png",
-                "/images/backprop/z22.png",
-                "/images/backprop/c1.png",
-                "/images/backprop/c2.png",
-                "/images/backprop/arrows/w1toc2.png",
-                "/images/backprop/dcda1_form1.png",
-                "/images/backprop/arrows/w1toc_expand1.png",
-                "/images/backprop/dcda_form2.png",
-                "/images/backprop/w1arrows_all.png",
-                "/images/backprop/dcda1.png",
-                "/images/backprop/arrows/w1toc_expand2.png",
-                "/images/backprop/dcda_form3.png",
-                "/images/backprop/formulas/dcda1_full.png",
-                "/images/backprop/formulas/dcda1_full2.png",
-                "/images/backprop/dc1da21.png",
-                "/images/backprop/arrows/w1toc_expand3.png",
-                "/images/backprop/formulas/dcdw1_full.png",
+                "/easyNN/images/backprop/arrows/biasarrow.png",
+                "/easyNN/images/backprop/dcdb.png",
+                "/easyNN/images/backprop/dcdb_final.png",
+                "/easyNN/images/backprop/dzdb.png",
+                "/easyNN/images/backprop/w1_teal.png",
+                "/easyNN/images/backprop/dcdw1.png",
+                "/easyNN/images/backprop/dz1dw1.png",
+                "/easyNN/images/backprop/da1dz1.png",
+                "/easyNN/images/backprop/arrows/w1all.png",
+                "/easyNN/images/backprop/dcda11.png",
+                "/easyNN/images/backprop/a11.png",
+                "/easyNN/images/backprop/z11.png",
+                "/easyNN/images/backprop/a22.png",
+                "/easyNN/images/backprop/z22.png",
+                "/easyNN/images/backprop/c1.png",
+                "/easyNN/images/backprop/c2.png",
+                "/easyNN/images/backprop/arrows/w1toc2.png",
+                "/easyNN/images/backprop/dcda1_form1.png",
+                "/easyNN/images/backprop/arrows/w1toc_expand1.png",
+                "/easyNN/images/backprop/dcda_form2.png",
+                "/easyNN/images/backprop/w1arrows_all.png",
+                "/easyNN/images/backprop/dcda1.png",
+                "/easyNN/images/backprop/arrows/w1toc_expand2.png",
+                "/easyNN/images/backprop/dcda_form3.png",
+                "/easyNN/images/backprop/formulas/dcda1_full.png",
+                "/easyNN/images/backprop/formulas/dcda1_full2.png",
+                "/easyNN/images/backprop/dc1da21.png",
+                "/easyNN/images/backprop/arrows/w1toc_expand3.png",
+                "/easyNN/images/backprop/formulas/dcdw1_full.png",
 
 
             ])
@@ -448,23 +448,23 @@ export class View{
         var startx=layout.CX;
         var starty=layout.CY+250;
 
-        var button_nextslide = new Button("button_nextslide",loader.resources["/images/buttons/next.png"].texture,layout.NEXTSLIDE_X,layout.NEXTSLIDE_Y,true);
-        var button_prevslide = new Button("button_prevslide",loader.resources["/images/buttons/back.png"].texture,layout.PREVSLIDE_X,layout.NEXTSLIDE_Y,true);
-        var button_start = new Button("button_start",loader.resources["/images/buttons/start.png"].texture,startx,starty,true);
+        var button_nextslide = new Button("button_nextslide",loader.resources["/easyNN/images/buttons/next.png"].texture,layout.NEXTSLIDE_X,layout.NEXTSLIDE_Y,true);
+        var button_prevslide = new Button("button_prevslide",loader.resources["/easyNN/images/buttons/back.png"].texture,layout.PREVSLIDE_X,layout.NEXTSLIDE_Y,true);
+        var button_start = new Button("button_start",loader.resources["/easyNN/images/buttons/start.png"].texture,startx,starty,true);
   
-        var button_backfromcalc = new Button("button_backfromcalc",loader.resources["/images/buttons/back.png"].texture,layout.PREVSLIDE_X,layout.NEXTSLIDE_Y,true);
-        var button_calc2sand = new Button("button_calc2sand",loader.resources["/images/buttons/next.png"].texture,layout.NEXTSLIDE_X,layout.NEXTSLIDE_Y,true);
+        var button_backfromcalc = new Button("button_backfromcalc",loader.resources["/easyNN/images/buttons/back.png"].texture,layout.PREVSLIDE_X,layout.NEXTSLIDE_Y,true);
+        var button_calc2sand = new Button("button_calc2sand",loader.resources["/easyNN/images/buttons/next.png"].texture,layout.NEXTSLIDE_X,layout.NEXTSLIDE_Y,true);
         var text_calc2sand = new PIXI.Text("Click next to go"+'\n'+ "to sandbox mode!", textstyles.default)
             text_calc2sand.name="text_calc2sand";
             text_calc2sand.x=layout.NEXTSLIDE_X+100;
             text_calc2sand.y=layout.NEXTSLIDE_Y-20;
 
-        var homebutton = new Button("homebutton",loader.resources["/images/buttons/home.png"].texture,30,layout.HEADER_HEIGHT/2,false)
-        var gotoneuron = new Button("gotoneuron",loader.resources["/images/buttons/gotoneuron.png"].texture,70,100,false)
-        var gotoforward = new Button("gotoforward",loader.resources["/images/buttons/gotoforward.png"].texture,70,150,false)
-        var gotobackprop = new Button("gotobackprop",loader.resources["/images/buttons/gotobackprop.png"].texture,70,200,false)
-        var gotocalc = new Button("gotocalc",loader.resources["/images/buttons/gotocalc.png"].texture,70,250,false)
-        var gotosand = new Button("gotosand",loader.resources["/images/buttons/sand.png"].texture,70,300,false,0xcdff94)
+        var homebutton = new Button("homebutton",loader.resources["/easyNN/images/buttons/home.png"].texture,30,layout.HEADER_HEIGHT/2,false)
+        var gotoneuron = new Button("gotoneuron",loader.resources["/easyNN/images/buttons/gotoneuron.png"].texture,70,100,false)
+        var gotoforward = new Button("gotoforward",loader.resources["/easyNN/images/buttons/gotoforward.png"].texture,70,150,false)
+        var gotobackprop = new Button("gotobackprop",loader.resources["/easyNN/images/buttons/gotobackprop.png"].texture,70,200,false)
+        var gotocalc = new Button("gotocalc",loader.resources["/easyNN/images/buttons/gotocalc.png"].texture,70,250,false)
+        var gotosand = new Button("gotosand",loader.resources["/easyNN/images/buttons/sand.png"].texture,70,300,false,0xcdff94)
 
 
 

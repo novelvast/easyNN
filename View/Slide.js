@@ -1,7 +1,7 @@
 // 页面类，页面控件的方法
 import {Button, tintDown, tintOver} from "./Button.js"
 import {layout} from "./layout.js"
-import {actFns} from "../../Model/actfns.js"
+import {actFns} from "../Model/actfns.js"
 import {data} from "../Model/data.js"
 //import {viewst} from "../Controller.js"
 import {textstyles} from "./textstyles.js"
@@ -104,7 +104,7 @@ export class Slide{
     }
 
     drawActFnButtons(){
-        var actfnsbox = new PIXI.Sprite(loader.resources["/images/boxes/actfnsbox.png"].texture);
+        var actfnsbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/actfnsbox.png"].texture);
             actfnsbox.name="actfnsbox";
             if(this.sandbox){
             actfnsbox.x=10;
@@ -119,7 +119,7 @@ export class Slide{
             }
 
         var slide=this;
-        actfnsbox.addChild(new Button("sigmoid",loader.resources["/images/buttons/sigmoid.png"].texture, 60,75,true));
+        actfnsbox.addChild(new Button("sigmoid",loader.resources["/easyNN/images/buttons/sigmoid.png"].texture, 60,75,true));
         actfnsbox.getChildByName("sigmoid").on('click', function(e){
 
             this.setTint(tintDown);
@@ -158,7 +158,7 @@ export class Slide{
 
         });
 
-        actfnsbox.addChild(new Button("relu",loader.resources["/images/buttons/relu.png"].texture, 60, 120,true));
+        actfnsbox.addChild(new Button("relu",loader.resources["/easyNN/images/buttons/relu.png"].texture, 60, 120,true));
         actfnsbox.getChildByName("relu").on('click', function(e){
 
             this.setTint(tintDown);
@@ -214,15 +214,15 @@ export class Slide{
         this.buttonContainer.addChild(buttonNeuronAddContainer,buttonNeuronRemContainer);
 
         //ADD LAYER
-        var layersbox = new PIXI.Sprite(loader.resources["/images/boxes/layersbox.png"].texture);
+        var layersbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/layersbox.png"].texture);
             layersbox.name="layersbox";
             layersbox.anchor.set(0.5)
             layersbox.x= layout.NEURON_LEFTLIM;
             layersbox.y= layout.NEURON_UPPERLIM-135;
             this.buttonContainer.addChild(layersbox);
 
-        layersbox.addChild(new Button("addlayer",loader.resources["/images/buttons/button_layer.png"].texture, -30, 0,true));
-        layersbox.addChild(new Button("remlayer",loader.resources["/images/buttons/button_removelayer.png"].texture, 80, 0, true));
+        layersbox.addChild(new Button("addlayer",loader.resources["/easyNN/images/buttons/button_layer.png"].texture, -30, 0,true));
+        layersbox.addChild(new Button("remlayer",loader.resources["/easyNN/images/buttons/button_removelayer.png"].texture, 80, 0, true));
 
         layersbox.getChildByName("addlayer").on('click', function(e){
             if(slide.slideNet.layers.length<slide.slideNet.maxLayers){
@@ -261,8 +261,8 @@ export class Slide{
         });
 
         for (var i =0; i<slide.slideNet.maxLayers; i++){
-            this.buttonContainer.getChildByName("buttonNeuronAddContainer").addChild(new Button("addneuron",loader.resources["/images/buttons/button_addneuron.png"].texture,layout.NEURON_LEFTLIM+ (i*layout.NEURON_X_DIF),layout.NEURON_UPPERLIM-80, false));
-            this.buttonContainer.getChildByName("buttonNeuronRemContainer").addChild(new Button("remneuron",loader.resources["/images/buttons/button_removeneuron.png"].texture,layout.NEURON_LEFTLIM+ (i*layout.NEURON_X_DIF),layout.NEURON_UPPERLIM-50, false));
+            this.buttonContainer.getChildByName("buttonNeuronAddContainer").addChild(new Button("addneuron",loader.resources["/easyNN/images/buttons/button_addneuron.png"].texture,layout.NEURON_LEFTLIM+ (i*layout.NEURON_X_DIF),layout.NEURON_UPPERLIM-80, false));
+            this.buttonContainer.getChildByName("buttonNeuronRemContainer").addChild(new Button("remneuron",loader.resources["/easyNN/images/buttons/button_removeneuron.png"].texture,layout.NEURON_LEFTLIM+ (i*layout.NEURON_X_DIF),layout.NEURON_UPPERLIM-50, false));
             this.setNeuronButtons(i);
             
           }
@@ -310,7 +310,7 @@ export class Slide{
 
     drawRateButtons(){
         var slide=this;
-        var ratebox = new PIXI.Sprite(loader.resources["/images/boxes/ratebox.png"].texture);
+        var ratebox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/ratebox.png"].texture);
             ratebox.name="ratebox";
             if(this.sandbox){
             
@@ -324,8 +324,8 @@ export class Slide{
 
         this.buttonContainer.addChild(ratebox);
         
-        ratebox.addChild(new Button("inc_rate",loader.resources["/images/buttons/plus.png"].texture,60,98,true));
-        ratebox.addChild(new Button("dec_rate",loader.resources["/images/buttons/minus.png"].texture,90,98,true));
+        ratebox.addChild(new Button("inc_rate",loader.resources["/easyNN/images/buttons/plus.png"].texture,60,98,true));
+        ratebox.addChild(new Button("dec_rate",loader.resources["/easyNN/images/buttons/minus.png"].texture,90,98,true));
 
         var rateback = new PIXI.Graphics();
             rateback.beginFill(0xFFFFFF)
@@ -404,7 +404,7 @@ export class Slide{
 
         this.loopcount=0;
 
-        var learnbox = new PIXI.Sprite(loader.resources["/images/boxes/learnbox.png"].texture);
+        var learnbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/learnbox.png"].texture);
             learnbox.name="learnbox";
             learnbox.x= 6;
             learnbox.y= 50; 
@@ -423,7 +423,7 @@ export class Slide{
             epoch.x=0
             epoch.y=0
 
-        var epochbox = new PIXI.Sprite(loader.resources["/images/boxes/epochbox.png"].texture);
+        var epochbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/epochbox.png"].texture);
             epochbox.name="epochbox";
             epochbox.anchor.set(0.5)
             epochbox.x=layout.CANVAS_WIDTH-200;
@@ -434,7 +434,7 @@ export class Slide{
             epochbox.addChild(epoch);  
         }  
 
-        learnbox.addChild(new Button("learn_stoch_step",loader.resources["/images/buttons/step.png"].texture,212.5,60,true));
+        learnbox.addChild(new Button("learn_stoch_step",loader.resources["/easyNN/images/buttons/step.png"].texture,212.5,60,true));
         learnbox.getChildByName("learn_stoch_step").on('click', function(e){
             slide.slideNet.learn();
             slide.draw_update(slide.slideNet);
@@ -449,7 +449,7 @@ export class Slide{
 
         });
 
-        learnbox.addChild(new Button("learn_stoch",loader.resources["/images/buttons/learn.png"].texture,125,60,true));
+        learnbox.addChild(new Button("learn_stoch",loader.resources["/easyNN/images/buttons/learn.png"].texture,125,60,true));
         learnbox.getChildByName("learn_stoch").pressCount=0;
         learnbox.getChildByName("learn_stoch").on('click', async function(e){
             
@@ -531,7 +531,7 @@ export class Slide{
         
         });
 
-        learnbox.addChild(new Button("learn_van_step",loader.resources["/images/buttons/step.png"].texture,212.5,60,true));
+        learnbox.addChild(new Button("learn_van_step",loader.resources["/easyNN/images/buttons/step.png"].texture,212.5,60,true));
         learnbox.getChildByName("learn_van_step").on('click', async function(e){
             slide.loopcount=slide.loopcount+1;
             if(slide.sandbox){
@@ -572,7 +572,7 @@ export class Slide{
 
         });
 
-        learnbox.addChild(new Button("learn_van",loader.resources["/images/buttons/learn.png"].texture, 125,60,true));
+        learnbox.addChild(new Button("learn_van",loader.resources["/easyNN/images/buttons/learn.png"].texture, 125,60,true));
         learnbox.getChildByName("learn_van").pressCount=0;
 
         slide.looplim=1000;
@@ -672,7 +672,7 @@ export class Slide{
             
         });
 
-        learnbox.addChild(new Button("pause",loader.resources["/images/buttons/pause.png"].texture,125,60,false));
+        learnbox.addChild(new Button("pause",loader.resources["/easyNN/images/buttons/pause.png"].texture,125,60,false));
         slide.pauselearn=0;
         learnbox.getChildByName("pause").on('click', function(e){
             slide.buttonContainer.getChildByName("learnbox").getChildByName("learn_stoch").pressCount=0;
@@ -693,7 +693,7 @@ export class Slide{
 
 
 
-        learnbox.addChild(new Button("reset",loader.resources["/images/buttons/reset.png"].texture,38,60,true));        
+        learnbox.addChild(new Button("reset",loader.resources["/easyNN/images/buttons/reset.png"].texture,38,60,true));        
         learnbox.getChildByName("reset").on('click', function(e){
             slide.loopcount=0;
             slide.looplim=1000;
@@ -838,13 +838,13 @@ export class Slide{
         var newdatay= 50
         var slide=this;
         
-        var databox= new PIXI.Sprite(loader.resources["/images/boxes/databox.png"].texture);
+        var databox= new PIXI.Sprite(loader.resources["/easyNN/images/boxes/databox.png"].texture);
         databox.name="databox";
             databox.x=newdatax
             databox.y=newdatay
         this.buttonContainer.addChild(databox);
 
-        databox.addChild(new Button("newdata",loader.resources["/images/buttons/datalin.png"].texture,100,88,true));   
+        databox.addChild(new Button("newdata",loader.resources["/easyNN/images/buttons/datalin.png"].texture,100,88,true));   
         databox.getChildByName("newdata").on('click', function(e){
 
             slide.looplim=1000;
@@ -857,7 +857,7 @@ export class Slide{
             }
 
             graph.posAxis();
-            graph.axis.texture=(loader.resources["/images/graph/axis.png"].texture);
+            graph.axis.texture=(loader.resources["/easyNN/images/graph/axis.png"].texture);
 
             for(var i=0;i<slide.slideNet.layers.length;i++){
                 slide.buttonContainer.getChildByName("buttonNeuronAddContainer").getChildAt(i).visible=false;
@@ -902,7 +902,7 @@ export class Slide{
             }
 
             graph.posAxis();
-            graph.axis.texture=(loader.resources["/images/graph/axis.png"].texture);
+            graph.axis.texture=(loader.resources["/easyNN/images/graph/axis.png"].texture);
 
             for(var i=0;i<slide.slideNet.layers.length;i++){
                 slide.buttonContainer.getChildByName("buttonNeuronAddContainer").getChildAt(i).visible=false;
@@ -935,7 +935,7 @@ export class Slide{
 
         });
 
-        databox.addChild(new Button("newdata_circle",loader.resources["/images/buttons/datacircle.png"].texture,195,88,true));   
+        databox.addChild(new Button("newdata_circle",loader.resources["/easyNN/images/buttons/datacircle.png"].texture,195,88,true));   
         databox.getChildByName("newdata_circle").on('click', function(e){
             slide.looplim=1000;
 
@@ -947,7 +947,7 @@ export class Slide{
             }
 
             graph.negAxis();
-            graph.axis.texture=loader.resources["/images/graph/axis_neg.png"].texture;
+            graph.axis.texture=loader.resources["/easyNN/images/graph/axis_neg.png"].texture;
 
             for(var i=0;i<slide.slideNet.layers.length;i++){
                 slide.buttonContainer.getChildByName("buttonNeuronAddContainer").getChildAt(i).visible=false;
@@ -992,7 +992,7 @@ export class Slide{
             }
 
             graph.negAxis();
-            graph.axis.texture=loader.resources["/images/graph/axis_neg.png"].texture;
+            graph.axis.texture=loader.resources["/easyNN/images/graph/axis_neg.png"].texture;
 
             for(var i=0;i<slide.slideNet.layers.length;i++){
                 slide.buttonContainer.getChildByName("buttonNeuronAddContainer").getChildAt(i).visible=false;
@@ -1214,21 +1214,21 @@ export class Slide{
                         var x= layout.NEURON_LEFTLIM -layout.NEURON_X_DIF/2 ;
                         var y= layout.NEURON_UPPERLIM;
             
-                        var w1=new PIXI.Sprite(loader.resources["/images/backprop/w1_teal.png"].texture);
+                        var w1=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w1_teal.png"].texture);
                             w1.anchor.set(0.5)
                             w1.x=x+10;
                             w1.y=y+40;
                             
-                        var w2=new PIXI.Sprite(loader.resources["/images/backprop/w2.png"].texture);
+                        var w2=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w2.png"].texture);
                             w2.anchor.set(0.5)
                             w2.x=x+5;
                             w2.y=y+120;
-                        var w3=new PIXI.Sprite(loader.resources["/images/backprop/w3_teal.png"].texture);
+                        var w3=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3_teal.png"].texture);
                             w3.anchor.set(0.5)
                             w3.x=x +135;
                             w3.y=y+45;
 
-                        var w4=new PIXI.Sprite(loader.resources["/images/backprop/w4_teal.png"].texture);
+                        var w4=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w4_teal.png"].texture);
                             w4.anchor.set(0.5)
                             w4.x=x+160;
                             w4.y=y+145;
@@ -1272,8 +1272,8 @@ export class Slide{
                     weightTextBox.addChild(weightText);
 
 
-                    var addweight = new Button("+",loader.resources["/images/buttons/plus.png"].texture,(startx+endx)/2,(starty+endy)/2,false);
-                    var loseweight = new Button("-",loader.resources["/images/buttons/minus.png"].texture,((startx+endx)/2)-25,(starty+endy)/2,false);
+                    var addweight = new Button("+",loader.resources["/easyNN/images/buttons/plus.png"].texture,(startx+endx)/2,(starty+endy)/2,false);
+                    var loseweight = new Button("-",loader.resources["/easyNN/images/buttons/minus.png"].texture,((startx+endx)/2)-25,(starty+endy)/2,false);
                     weightSprite.addChild(addweight,loseweight);
                                         
                     weightSprite.on('mouseover', function(e){
@@ -1461,8 +1461,8 @@ export class Slide{
 
                                 
 
-                    var addweight = new Button("+",loader.resources["/images/buttons/plus.png"].texture,(startx+endx)/2,(starty+endy)/2,false);
-                    var loseweight = new Button("-",loader.resources["/images/buttons/minus.png"].texture,((startx+endx)/2)-25,(starty+endy)/2,false);
+                    var addweight = new Button("+",loader.resources["/easyNN/images/buttons/plus.png"].texture,(startx+endx)/2,(starty+endy)/2,false);
+                    var loseweight = new Button("-",loader.resources["/easyNN/images/buttons/minus.png"].texture,((startx+endx)/2)-25,(starty+endy)/2,false);
                     weightSprite.addChild(addweight,loseweight);
                                         
                     weightSprite.on('mouseover', function(e){
@@ -1668,7 +1668,7 @@ export class Slide{
           for(var j = 0; j<net.getLayer(i).neurons.length; j++){
 
 
-                var neuronBase = new PIXI.Sprite(loader.resources["/images/net/neuron.png"].texture);
+                var neuronBase = new PIXI.Sprite(loader.resources["/easyNN/images/net/neuron.png"].texture);
             
                 neuronBase.anchor.set(0.5);
                 neuronBase.name = i.toString() + j.toString();
@@ -1766,7 +1766,7 @@ export class Slide{
             overText3.y=30;
             
 
-            var neuronOver = new PIXI.Sprite(loader.resources["/images/net/overneuron2.png"].texture);
+            var neuronOver = new PIXI.Sprite(loader.resources["/easyNN/images/net/overneuron2.png"].texture);
                 neuronOver.anchor.set(0.5);
                 neuronOver.scale.set(1.5);
                 neuronOver.name = neuronBase.name;
@@ -1783,7 +1783,7 @@ export class Slide{
 
       
               //detection for showing overneuron
-            var sensor= new PIXI.Sprite(loader.resources["/images/net/neuron.png"].texture);
+            var sensor= new PIXI.Sprite(loader.resources["/easyNN/images/net/neuron.png"].texture);
                 sensor.anchor.set(0.5);
                 sensor.x=neuronBase.x;
                 sensor.y=neuronBase.y;
@@ -1808,7 +1808,7 @@ export class Slide{
 
             // backprop neuron bases have both z and a showing
             if(this.backprop){
-                neuronBase.texture= loader.resources["/images/net/neuron_backprop.png"].texture;
+                neuronBase.texture= loader.resources["/easyNN/images/net/neuron_backprop.png"].texture;
 
                 if(this.backprop_steps){
                     neuronText.text=formatter.format(net.getLayer(i).neurons[j].output_nofn)+"  "+formatter.format(net.getLayer(i).neurons[j].output);
@@ -1818,13 +1818,13 @@ export class Slide{
 
 
                     if(i==0 && j==0){
-                        var z1=new PIXI.Sprite(loader.resources["/images/backprop/z11.png"].texture);
+                        var z1=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/z11.png"].texture);
                         z1.anchor.set(0.5)
                         z1.x=-26;
                         z1.y=10;    
                         neuronText.addChild(z1);
 
-                        var a1=new PIXI.Sprite(loader.resources["/images/backprop/a11.png"].texture);
+                        var a1=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a11.png"].texture);
                         a1.anchor.set(0.5)
                         a1.x=35;
                         a1.y=10;    
@@ -1832,26 +1832,26 @@ export class Slide{
                 
                     } else if(i==1 && j==0){
 
-                        var z3=new PIXI.Sprite(loader.resources["/images/backprop/z21.png"].texture);
+                        var z3=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/z21.png"].texture);
                         z3.anchor.set(0.5)
                         z3.x=-28;
                         z3.y=10;    
                         neuronText.addChild(z3);
 
-                        var a3=new PIXI.Sprite(loader.resources["/images/backprop/a21.png"].texture);
+                        var a3=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a21.png"].texture);
                         a3.anchor.set(0.5)
                         a3.x=32;
                         a3.y=10;    
                         neuronText.addChild(a3);
 
                     } else if(i==1 && j==1){
-                        var z4=new PIXI.Sprite(loader.resources["/images/backprop/z22.png"].texture);
+                        var z4=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/z22.png"].texture);
                         z4.anchor.set(0.5)
                         z4.x=-26;
                         z4.y=10;    
                         neuronText.addChild(z4);
 
-                        var a4=new PIXI.Sprite(loader.resources["/images/backprop/a22.png"].texture);
+                        var a4=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a22.png"].texture);
                         a4.anchor.set(0.5)
                         a4.x=32;
                         a4.y=10;    
@@ -1878,7 +1878,7 @@ export class Slide{
       
         for(var i = 0; i<net.layers.length; i++){
           for(var j = 0; j<net.getLayer(i).neurons.length; j++){
-            var neuronBase = new PIXI.Sprite(loader.resources["/images/net/neuron_large.png"].texture);
+            var neuronBase = new PIXI.Sprite(loader.resources["/easyNN/images/net/neuron_large.png"].texture);
             
             neuronBase.anchor.set(0.5);
             neuronBase.name = i.toString() + j.toString();
@@ -1961,7 +1961,7 @@ export class Slide{
             neuronBase.addChild(overText_weights,overText_outnofn);
             neuronBase.addChild(overText_f,overText_paren,overText_actfn,overText_actfn_out);
 
-            var neuronOver_large=new PIXI.Sprite(loader.resources["/images/net/neuronOver_large.png"].texture);
+            var neuronOver_large=new PIXI.Sprite(loader.resources["/easyNN/images/net/neuronOver_large.png"].texture);
                 neuronOver_large.anchor.set(0.5);
 
                 neuronOver_large.x=neuronBase.x;
@@ -2144,7 +2144,7 @@ export class Slide{
 
         for(var i = 0; i<net.netInput.length; i++){
 
-            var inputBase = new PIXI.Sprite(loader.resources["/images/net/inputbase.png"].texture);
+            var inputBase = new PIXI.Sprite(loader.resources["/easyNN/images/net/inputbase.png"].texture);
                 inputBase.anchor.set(0.5);
                 inputBase.name = i.toString();
                 inputBase.x= layout.NEURON_LEFTLIM - layout.NEURON_X_DIF;//leftlim;
@@ -2153,9 +2153,9 @@ export class Slide{
 
             if(this.backprop_labels){
                 if(i==0){
-                    var inputText = new PIXI.Sprite(loader.resources["/images/backprop/in1.png"].texture);
+                    var inputText = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/in1.png"].texture);
                 } else if(i==1){
-                    var inputText = new PIXI.Sprite(loader.resources["/images/backprop/in2.png"].texture);
+                    var inputText = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/in2.png"].texture);
 
                 }
 
@@ -2177,7 +2177,7 @@ export class Slide{
 
         for(var i = 0; i<net.netInput.length; i++){
 
-            var inputBase = new PIXI.Sprite(loader.resources["/images/net/inputbase.png"].texture);
+            var inputBase = new PIXI.Sprite(loader.resources["/easyNN/images/net/inputbase.png"].texture);
                 inputBase.scale.set(1.2);
                 inputBase.anchor.set(0.5);
                 inputBase.name = i.toString();
@@ -2225,7 +2225,7 @@ export class Slide{
             var targetLabel0= this.labelsContainer.getChildByName("targetLabel0");
             var typeLabel0= this.labelsContainer.getChildByName("typeLabel0");
 
-            var y1 = new PIXI.Sprite(loader.resources["/images/backprop/y1.png"].texture);
+            var y1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/y1.png"].texture);
             targetLabel0.addChild(y1);
 
             targetLabel0.text="     = "+net.target[0];
@@ -2240,7 +2240,7 @@ export class Slide{
             var targetLabel1= this.labelsContainer.getChildByName("targetLabel1");
             var typeLabel1= this.labelsContainer.getChildByName("typeLabel1");
 
-            var y2 = new PIXI.Sprite(loader.resources["/images/backprop/y2.png"].texture);
+            var y2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/y2.png"].texture);
             targetLabel1.addChild(y2);
 
             targetLabel1.text="     = "+net.target[1];
@@ -2254,13 +2254,13 @@ export class Slide{
 
             if(this.backprop_steps){
 
-            var c1 = new PIXI.Sprite(loader.resources["/images/backprop/c1.png"].texture);
+            var c1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/c1.png"].texture);
                 c1.scale.set(0.55)
                 c1.x=-10;
                 c1.y=10;
             targetLabel0.addChild(c1);
 
-            var c2 = new PIXI.Sprite(loader.resources["/images/backprop/c2.png"].texture);
+            var c2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/c2.png"].texture);
                 c2.scale.set(0.55)
                 c2.x=-10;
                 c2.y=10;
@@ -2270,8 +2270,8 @@ export class Slide{
             if(this.backprop_labels){
                 targetLabel0.text="     = target";
                 
-                var y1 = new PIXI.Sprite(loader.resources["/images/backprop/y1.png"].texture);
-                var c1 = new PIXI.Sprite(loader.resources["/images/backprop/c1form.png"].texture);
+                var y1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/y1.png"].texture);
+                var c1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/c1form.png"].texture);
                 c1.scale.set(0.55)
                 c1.x=-10;
                 c1.y=10;
@@ -2279,8 +2279,8 @@ export class Slide{
 
                 targetLabel1.text="     = target";
 
-                var y2 = new PIXI.Sprite(loader.resources["/images/backprop/y2.png"].texture);
-                var c2 = new PIXI.Sprite(loader.resources["/images/backprop/c2form.png"].texture);
+                var y2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/y2.png"].texture);
+                var c2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/c2form.png"].texture);
                 c2.scale.set(0.55)
                 c2.x=-10;
                 c2.y=10;
@@ -2309,15 +2309,15 @@ export class Slide{
 
         // data /image
         
-        var target = new PIXI.Sprite(loader.resources["/images/net/strawberrycard.png"].texture);
+        var target = new PIXI.Sprite(loader.resources["/easyNN/images/net/strawberrycard.png"].texture);
 
         target.anchor.set(0.5)
         target.name="target";
 
         if (net.targetText=="blueberry"){
-            target.texture=loader.resources["/images/net/blueberrycard.png"].texture;
+            target.texture=loader.resources["/easyNN/images/net/blueberrycard.png"].texture;
         } else if (net.targetText=="strawberry"){
-            target.texture=loader.resources["/images/net/strawberrycard.png"].texture;
+            target.texture=loader.resources["/easyNN/images/net/strawberrycard.png"].texture;
         }
             
         target.x = layout.NEURON_LEFTLIM- layout.NEURON_X_DIF -80;
@@ -2368,7 +2368,7 @@ export class Slide{
 
     drawCost_steps(){
         
-        var costBox = new PIXI.Sprite(loader.resources["/images/boxes/cost.png"].texture);
+        var costBox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/cost.png"].texture);
             costBox.name= "costBox";
             costBox.anchor.set(0.5)
             costBox.x=layout.NEURON_LEFTLIM+340;
@@ -2381,7 +2381,7 @@ export class Slide{
             costText.y=15;
         costBox.addChild(costText);
 
-        var cost1box=  new PIXI.Sprite(loader.resources["/images/cost/cost1box.png"].texture);
+        var cost1box=  new PIXI.Sprite(loader.resources["/easyNN/images/cost/cost1box.png"].texture);
             cost1box.name="cost1box";
             cost1box.x=layout.NEURON_LEFTLIM +135;
             cost1box.y=layout.NEURON_UPPERLIM -40;
@@ -2393,7 +2393,7 @@ export class Slide{
             cost1.y=50;
         cost1box.addChild(cost1);
         
-        var cost2box=  new PIXI.Sprite(loader.resources["/images/cost/cost2box.png"].texture);
+        var cost2box=  new PIXI.Sprite(loader.resources["/easyNN/images/cost/cost2box.png"].texture);
             cost2box.name="cost2box";
             cost2box.x=layout.NEURON_LEFTLIM +135;
             cost2box.y=layout.NEURON_UPPERLIM +90;
@@ -2405,7 +2405,7 @@ export class Slide{
             cost2.y=50;
         cost2box.addChild(cost2);
 
-        var costplus= new PIXI.Sprite(loader.resources["/images/cost/costplus.png"].texture);
+        var costplus= new PIXI.Sprite(loader.resources["/easyNN/images/cost/costplus.png"].texture);
             costplus.name="costplus";
             costplus.x=layout.NEURON_LEFTLIM +80;
             costplus.y=layout.NEURON_UPPERLIM+240;
@@ -2415,7 +2415,7 @@ export class Slide{
     }
 
     drawCost(){
-        var costBox = new PIXI.Sprite(loader.resources["/images/boxes/cost.png"].texture);
+        var costBox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/cost.png"].texture);
             costBox.name= "costBox";
             costBox.anchor.set(0.5)
 
@@ -2440,7 +2440,7 @@ export class Slide{
         if(this.backprop_labels){
             costText.text="";
             
-            var cplus = new PIXI.Sprite(loader.resources["/images/backprop/cplus2.png"].texture);
+            var cplus = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/cplus2.png"].texture);
             cplus.anchor.set(0.5)
             cplus.scale.set(0.5)
             cplus.x=0;
@@ -2455,9 +2455,9 @@ export class Slide{
 
 
             if (net.targetText=="blueberry"){
-                targetimg.texture=loader.resources["/images/net/blueberrycard.png"].texture;
+                targetimg.texture=loader.resources["/easyNN/images/net/blueberrycard.png"].texture;
             } else if (net.targetText=="strawberry"){
-            targetimg.texture=loader.resources["/images/net/strawberrycard.png"].texture;
+            targetimg.texture=loader.resources["/easyNN/images/net/strawberrycard.png"].texture;
             }
 
 
@@ -2531,7 +2531,7 @@ export class Slide{
 
 
         //dz_dw
-        var dzdw3_small= new PIXI.Sprite(loader.resources["/images/backprop/dxdy/dzdw3.png"].texture);;
+        var dzdw3_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dxdy/dzdw3.png"].texture);;
             dzdw3_small.scale.set(0.9)
             dzdw3_small.anchor.set(0.5)
             dzdw3_small.isSprite=true;
@@ -2546,7 +2546,7 @@ export class Slide{
         this.textContainer.addChild(dzdw_num);
 
         //da_dz
-        var dadz21_small= new PIXI.Sprite(loader.resources["/images/backprop/dxdy/dadz21.png"].texture);
+        var dadz21_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dxdy/dadz21.png"].texture);
             dadz21_small.scale.set(0.9)
             dadz21_small.anchor.set(0.5)
             dadz21_small.isSprite=true;
@@ -2562,7 +2562,7 @@ export class Slide{
         this.textContainer.addChild(dadz_num);
 
         //dc_da
-        var dcda21_small= new PIXI.Sprite(loader.resources["/images/backprop/dxdy/dcda21.png"].texture);
+        var dcda21_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dxdy/dcda21.png"].texture);
             dcda21_small.scale.set(0.9);
             dcda21_small.anchor.set(0.5)
             dcda21_small.isSprite=true;
@@ -2577,7 +2577,7 @@ export class Slide{
         this.textContainer.addChild(dcda_num);
 
         //DC_DW
-        var dcdw3_small= new PIXI.Sprite(loader.resources["/images/backprop/dxdy/dcdw3.png"].texture);
+        var dcdw3_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dxdy/dcdw3.png"].texture);
         dcdw3_small.scale.set(1.0);
         dcdw3_small.anchor.set(0.5)
         dcdw3_small.isSprite=true;
@@ -2592,7 +2592,7 @@ export class Slide{
         this.textContainer.addChild(dcdw_num);
 
         //W_NEW
-        var w3_new= new PIXI.Sprite(loader.resources["/images/backprop/dxdy/w3_new.png"].texture);
+        var w3_new= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dxdy/w3_new.png"].texture);
         w3_new.scale.set(0.75)
         w3_new.anchor.set(0.5)
         w3_new.isSprite=true;
@@ -2632,11 +2632,11 @@ export class Slide{
             +'\n'+"   = "+newweight.toFixed(4);
 
         if(this.w1_all){
-            dzdw3_small.texture = loader.resources["/images/backprop/dxdy/dzdw1.png"].texture;
-            dadz21_small.texture = loader.resources["/images/backprop/dxdy/dadz11.png"].texture;
-            dcda21_small.texture = loader.resources["/images/backprop/dxdy/dcda11.png"].texture;
-            dcdw3_small.texture = loader.resources["/images/backprop/dxdy/dcdw1.png"].texture;
-            w3_new.texture = loader.resources["/images/backprop/dxdy/w1_new.png"].texture;
+            dzdw3_small.texture = loader.resources["/easyNN/images/backprop/dxdy/dzdw1.png"].texture;
+            dadz21_small.texture = loader.resources["/easyNN/images/backprop/dxdy/dadz11.png"].texture;
+            dcda21_small.texture = loader.resources["/easyNN/images/backprop/dxdy/dcda11.png"].texture;
+            dcdw3_small.texture = loader.resources["/easyNN/images/backprop/dxdy/dcdw1.png"].texture;
+            w3_new.texture = loader.resources["/easyNN/images/backprop/dxdy/w1_new.png"].texture;
 
             dcda_num.text="= ("+this.slideNet.getLayer(1).getNeuron(0).output.toFixed(2) + 
               " × " + "(1 - " +this.slideNet.getLayer(1).getNeuron(0).output.toFixed(2) +"))" +
@@ -2659,8 +2659,8 @@ export class Slide{
 
     drawTextButtons(){
         /*
-        this.textbuttonContainer.addChild(new Button("nexttext",PIXI.Texture.from('/images/buttons/next.png'),layout.NEXTSLIDE_X,layout.NEXTSLIDE_Y,true));
-        this.textbuttonContainer.addChild(new Button("prevtext",PIXI.Texture.from('/images/buttons/back.png'), layout.PREVSLIDE_X,layout.NEXTSLIDE_Y,false));
+        this.textbuttonContainer.addChild(new Button("nexttext",PIXI.Texture.from('/easyNN/images/buttons/next.png'),layout.NEXTSLIDE_X,layout.NEXTSLIDE_Y,true));
+        this.textbuttonContainer.addChild(new Button("prevtext",PIXI.Texture.from('/easyNN/images/buttons/back.png'), layout.PREVSLIDE_X,layout.NEXTSLIDE_Y,false));
 
         var slide = this;
         if(slide.textContainer.children.length<=1){
@@ -2880,7 +2880,7 @@ export class Slide{
     }
 
     drawInteractive(){
-        // var interactive = new PIXI.Sprite(PIXI.Texture.from('/images/interactive.png'));
+        // var interactive = new PIXI.Sprite(PIXI.Texture.from('/easyNN/images/interactive.png'));
         //     interactive.x=layout.CX+400;
         //     interactive.y=layout.CY-220;
         // this.textContainer.addChild(interactive);

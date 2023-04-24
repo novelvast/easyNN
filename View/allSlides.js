@@ -113,7 +113,7 @@ export function makeSlides(){
     
 
     //INTRO 4
-    var percep_blank =new PIXI.Sprite(loader.resources["/images/intro/percep_blank1.png"].texture);
+    var percep_blank =new PIXI.Sprite(loader.resources["/easyNN/images/intro/percep_blank1.png"].texture);
         percep_blank.isSprite=true;
         percep_blank.x=layout.CX-120;
         percep_blank.y=layout.CY-150;
@@ -138,17 +138,17 @@ export function makeSlides(){
     var inx= percep_blank.x+3;
     var iny = percep_blank.y+110;
 
-    var singleblue2 =new PIXI.Sprite(loader.resources["/images/intro/singleblue.png"].texture);
+    var singleblue2 =new PIXI.Sprite(loader.resources["/easyNN/images/intro/singleblue.png"].texture);
         singleblue2.x=inx;
         singleblue2.y=iny;
         singleblue2.visible=false;
 
-    var singlestraw2 =new PIXI.Sprite(loader.resources["/images/intro/singlestraw.png"].texture);
+    var singlestraw2 =new PIXI.Sprite(loader.resources["/easyNN/images/intro/singlestraw.png"].texture);
         singlestraw2.x=inx;
         singlestraw2.y=iny;
         singlestraw2.visible=false;
 
-    var singleblue =new PIXI.Sprite(loader.resources["/images/intro/singleblue.png"].texture);
+    var singleblue =new PIXI.Sprite(loader.resources["/easyNN/images/intro/singleblue.png"].texture);
         singleblue.isSprite=true;
         singleblue.x=bluex;
         singleblue.y=bluey;
@@ -161,7 +161,7 @@ export function makeSlides(){
 
 
             await sleep(500);
-           percep_blank.texture=loader.resources["/images/intro/percep_blue1.png"].texture;
+           percep_blank.texture=loader.resources["/easyNN/images/intro/percep_blue1.png"].texture;
            
         });
 
@@ -172,12 +172,12 @@ export function makeSlides(){
 
 
             await sleep(500);
-           percep_blank.texture=loader.resources["/images/intro/percep_blue1.png"].texture;
+           percep_blank.texture=loader.resources["/easyNN/images/intro/percep_blue1.png"].texture;
            
         });
 
 
-    var singlestraw =new PIXI.Sprite(loader.resources["/images/intro/singlestraw.png"].texture);
+    var singlestraw =new PIXI.Sprite(loader.resources["/easyNN/images/intro/singlestraw.png"].texture);
         singlestraw.isSprite=true;
         singlestraw.x=strawx;
         singlestraw.y=strawy;
@@ -189,7 +189,7 @@ export function makeSlides(){
             singleblue2.visible=false;
 
             await sleep(500);
-            percep_blank.texture=loader.resources["/images/intro/percep_straw1.png"].texture;
+            percep_blank.texture=loader.resources["/easyNN/images/intro/percep_straw1.png"].texture;
             
         });
 
@@ -199,7 +199,7 @@ export function makeSlides(){
             singleblue2.visible=false;
 
             await sleep(500);
-            percep_blank.texture=loader.resources["/images/intro/percep_straw1.png"].texture;
+            percep_blank.texture=loader.resources["/easyNN/images/intro/percep_straw1.png"].texture;
             
         });
 
@@ -251,13 +251,13 @@ export function makeSlides(){
     SlideNeuron2.draw_init_large(SlideNeuron2.slideNet);
     SlideNeuron2.slideNet.getLayer(0).getNeuron(0).bias=0.21;
 
-    var neuron_large_over=new PIXI.Sprite(loader.resources["/images/net/neuronOver_large.png"].texture);
+    var neuron_large_over=new PIXI.Sprite(loader.resources["/easyNN/images/net/neuronOver_large.png"].texture);
         neuron_large_over.isSprite=true;
         neuron_large_over.anchor.set(0.5);
         neuron_large_over.x=layout.NEURON_LEFTLIM_LARGE;
         neuron_large_over.y=layout.CY;
 
-    var inputexample=new PIXI.Sprite(loader.resources["/images/intro/input_example.png"].texture);
+    var inputexample=new PIXI.Sprite(loader.resources["/easyNN/images/intro/input_example.png"].texture);
         inputexample.isSprite=true;
         inputexample.scale.set(1.0);
         inputexample.x= layout.CX-350;
@@ -280,7 +280,7 @@ export function makeSlides(){
     SlideNeuron3.slideNet.update();
     SlideNeuron3.draw_init_large(SlideNeuron3.slideNet);
 
-    var neuron_large_actfncover=new PIXI.Sprite(loader.resources["/images/net/neuron_large_actfncover.png"].texture);
+    var neuron_large_actfncover=new PIXI.Sprite(loader.resources["/easyNN/images/net/neuron_large_actfncover.png"].texture);
         neuron_large_actfncover.isSprite=true;
         neuron_large_actfncover.anchor.set(0.5);
         neuron_large_actfncover.x=layout.NEURON_LEFTLIM_LARGE;
@@ -335,7 +335,7 @@ export function makeSlides(){
     SlideNeuron4.slideNet.update();
     SlideNeuron4.draw_init_large(SlideNeuron4.slideNet);
 
-    var sigmoid=new PIXI.Sprite(loader.resources["/images/intro/sigmoid_graph.png"].texture);
+    var sigmoid=new PIXI.Sprite(loader.resources["/easyNN/images/intro/sigmoid_graph.png"].texture);
     sigmoid.isSprite=true;
     sigmoid.scale.set(0.9)
     sigmoid.x=layout.CX-480;
@@ -360,7 +360,7 @@ export function makeSlides(){
     SlideNeuron5.slideNet.update();
     SlideNeuron5.draw_init_large(SlideNeuron5.slideNet);
 
-    var relu=new PIXI.Sprite(loader.resources["/images/intro/relu_graph.png"].texture);
+    var relu=new PIXI.Sprite(loader.resources["/easyNN/images/intro/relu_graph.png"].texture);
     relu.isSprite=true;
     relu.scale.set(0.9)
     relu.x=layout.CX-480;
@@ -439,7 +439,7 @@ export function makeSlides(){
     SlideNet1.draw_init(net1);
 
 
-    var targetarrow=new PIXI.Sprite(loader.resources["/images/arrows/targetarrow.png"].texture);
+    var targetarrow=new PIXI.Sprite(loader.resources["/easyNN/images/arrows/targetarrow.png"].texture);
     targetarrow.isSprite=true;
     targetarrow.scale.set(0.5)
     targetarrow.x=layout.CX-110;
@@ -560,21 +560,21 @@ export function makeSlides(){
     SlideBackIntro1.drawTextButtons();
 
     //back2
-    var percep_forward=new PIXI.Sprite(loader.resources["/images/cost/percep_forward.png"].texture);
+    var percep_forward=new PIXI.Sprite(loader.resources["/easyNN/images/cost/percep_forward.png"].texture);
     percep_forward.anchor.set(0.5);
     percep_forward.isSprite=true;
     percep_forward.scale.set(0.6)
     percep_forward.x=layout.CX+300;
     percep_forward.y=layout.CY-120;
 
-    var percep_cost=new PIXI.Sprite(loader.resources["/images/cost/percep_cost.png"].texture);
+    var percep_cost=new PIXI.Sprite(loader.resources["/easyNN/images/cost/percep_cost.png"].texture);
     percep_cost.anchor.set(0.5);
     percep_cost.isSprite=true;
     percep_cost.scale.set(0.6)
     percep_cost.x=layout.CX+350;
     percep_cost.y=layout.CY+20;
 
-    var percep_update=new PIXI.Sprite(loader.resources["/images/cost/percep_update.png"].texture);
+    var percep_update=new PIXI.Sprite(loader.resources["/easyNN/images/cost/percep_update.png"].texture);
     percep_update.anchor.set(0.5);
     percep_update.isSprite=true;    
     percep_update.scale.set(0.6)
@@ -599,7 +599,7 @@ export function makeSlides(){
 
 
     //COST 1
-    var costform = new PIXI.Sprite(loader.resources["/images/cost/costformwb2.png"].texture);
+    var costform = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costformwb2.png"].texture);
         costform.scale.set(0.8)
         costform.anchor.set(0.5)
 
@@ -660,7 +660,7 @@ export function makeSlides(){
     // layout.NEURON_UPPERLIM = window.innerHeight/2 -80;
 
     //COST 3
-    var costgraph = new PIXI.Sprite(loader.resources["/images/cost/costgraph.png"].texture);
+    var costgraph = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph.png"].texture);
     costgraph.anchor.set(0.5)
     costgraph.isSprite=true;
 
@@ -682,13 +682,13 @@ export function makeSlides(){
     SlideCost3.drawText(textError3);
 
     //COST 4
-    var costgraph_point = new PIXI.Sprite(loader.resources["/images/cost/costgraph_point.png"].texture);
+    var costgraph_point = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_point.png"].texture);
     costgraph_point.anchor.set(0.5)
     costgraph_point.isSprite=true;
     costgraph_point.x=costgraphx;
     costgraph_point.y=costgraphy;
 
-    var nablaC = new PIXI.Sprite(loader.resources["/images/cost/nablaC.png"].texture);
+    var nablaC = new PIXI.Sprite(loader.resources["/easyNN/images/cost/nablaC.png"].texture);
     nablaC.anchor.set(0.5)
     nablaC.scale.set(0.8)
 
@@ -709,14 +709,14 @@ export function makeSlides(){
     SlideCost4.drawText(textError4);
 
     //COST 5
-    var costgraph_slope = new PIXI.Sprite(loader.resources["/images/cost/costgraph_slope1.png"].texture);
+    var costgraph_slope = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_slope1.png"].texture);
         costgraph_slope.anchor.set(0.5)
         costgraph_slope.isSprite=true;
         costgraph_slope.x=costgraphx;
         costgraph_slope.y=costgraphy;
 
 
-        var minnablaC = new PIXI.Sprite(loader.resources["/images/cost/minnablaC.png"].texture);
+        var minnablaC = new PIXI.Sprite(loader.resources["/easyNN/images/cost/minnablaC.png"].texture);
             minnablaC.anchor.set(0.5)
             minnablaC.scale.set(0.8)
 
@@ -724,7 +724,7 @@ export function makeSlides(){
             minnablaC.x=layout.CX+445;
             minnablaC.y=layout.CY-190+13;
 
-        var minnablaC2 = new PIXI.Sprite(loader.resources["/images/cost/minnablaC.png"].texture);
+        var minnablaC2 = new PIXI.Sprite(loader.resources["/easyNN/images/cost/minnablaC.png"].texture);
             minnablaC2.anchor.set(0.5)
             minnablaC2.scale.set(0.8)
 
@@ -732,7 +732,7 @@ export function makeSlides(){
             minnablaC2.x=layout.CX+40+165;
             minnablaC2.y=layout.CY-95+13;
 
-        var lr = new PIXI.Sprite(loader.resources["/images/cost/lr.png"].texture);
+        var lr = new PIXI.Sprite(loader.resources["/easyNN/images/cost/lr.png"].texture);
             lr.anchor.set(0.5)
             lr.scale.set(0.8)
 
@@ -740,7 +740,7 @@ export function makeSlides(){
             lr.x=layout.CX+195+165;
             lr.y=layout.CY-48+13
 
-        var wnewform = new PIXI.Sprite(loader.resources["/images/cost/wnewform.png"].texture);
+        var wnewform = new PIXI.Sprite(loader.resources["/easyNN/images/cost/wnewform.png"].texture);
             wnewform.anchor.set(0.5)
             wnewform.scale.set(0.7)
 
@@ -766,7 +766,7 @@ export function makeSlides(){
     SlideCost5.drawText(textError5);
 
     //COST 6
-    var costgraph_slope2 = new PIXI.Sprite(loader.resources["/images/cost/costgraph_slope2.png"].texture);
+    var costgraph_slope2 = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_slope2.png"].texture);
         costgraph_slope2.anchor.set(0.5)
         costgraph_slope2.isSprite=true;
         costgraph_slope2.x=costgraphx;
@@ -779,14 +779,14 @@ export function makeSlides(){
     SlideCost6.drawText(textError6);
 
     //COST 7
-    var costgraph_lrsmall = new PIXI.Sprite(loader.resources["/images/cost/costgraph_lrsmall.png"].texture);
+    var costgraph_lrsmall = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_lrsmall.png"].texture);
         costgraph_lrsmall.anchor.set(0.5)
         costgraph_lrsmall.scale.set(0.8)
         costgraph_lrsmall.isSprite=true;
         costgraph_lrsmall.x=layout.CX-200;
         costgraph_lrsmall.y=layout.CY;
 
-    var costgraph_lrlarge = new PIXI.Sprite(loader.resources["/images/cost/costgraph_lrlarge.png"].texture);
+    var costgraph_lrlarge = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_lrlarge.png"].texture);
         costgraph_lrlarge.anchor.set(0.5);
         costgraph_lrlarge.scale.set(0.8);
         costgraph_lrlarge.isSprite=true;
@@ -853,7 +853,7 @@ export function makeSlides(){
 
 
     //COST 9
-    var gotocalcarrow = new PIXI.Sprite(loader.resources["/images/arrows/gotocalcarrow.png"].texture);
+    var gotocalcarrow = new PIXI.Sprite(loader.resources["/easyNN/images/arrows/gotocalcarrow.png"].texture);
         gotocalcarrow.anchor.set(0.5);
         gotocalcarrow.scale.set(0.8);
         gotocalcarrow.isSprite=true;
@@ -872,7 +872,7 @@ export function makeSlides(){
 
     var gotocalcx=layout.CX;
     var gotocalcy=layout.CY+50;
-    var gotocalc=new Button("gotocalc",loader.resources["/images/buttons/calculus.png"].texture, gotocalcx,gotocalcy,true);
+    var gotocalc=new Button("gotocalc",loader.resources["/easyNN/images/buttons/calculus.png"].texture, gotocalcx,gotocalcy,true);
     gotocalc.on('click', function(e){
 
             // viewst.currentSlide=36;
@@ -890,17 +890,17 @@ export function makeSlides(){
 
 
     //COST 10
-    var fakelearnbox = new PIXI.Sprite(loader.resources["/images/boxes/learnbox.png"].texture);
+    var fakelearnbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/learnbox.png"].texture);
         fakelearnbox.isSprite=true;
         fakelearnbox.x= layout.CX-200;
         fakelearnbox.y= layout.CY+75; 
         fakelearnbox.scale.set(1.2);
 
-    fakelearnbox.addChild(new Button("fakestep",loader.resources["/images/buttons/step.png"].texture,212.5,60,true));
-    fakelearnbox.addChild(new Button("fakelearn",loader.resources["/images/buttons/learn.png"].texture,125,60,true));
-    fakelearnbox.addChild(new Button("fakereset",loader.resources["/images/buttons/reset.png"].texture,38,60,true));        
+    fakelearnbox.addChild(new Button("fakestep",loader.resources["/easyNN/images/buttons/step.png"].texture,212.5,60,true));
+    fakelearnbox.addChild(new Button("fakelearn",loader.resources["/easyNN/images/buttons/learn.png"].texture,125,60,true));
+    fakelearnbox.addChild(new Button("fakereset",loader.resources["/easyNN/images/buttons/reset.png"].texture,38,60,true));        
 
-    var learnboxarrow = new PIXI.Sprite(loader.resources["/images/arrows/learnboxarrows.png"].texture);
+    var learnboxarrow = new PIXI.Sprite(loader.resources["/easyNN/images/arrows/learnboxarrows.png"].texture);
     learnboxarrow.anchor.set(0.5);
     learnboxarrow.isSprite=true;
     learnboxarrow.x=layout.CX-30;
@@ -984,7 +984,7 @@ export function makeSlides(){
         fill: 0x007015 
     });
 
-    var a21example= new PIXI.Sprite(loader.resources["/images/backprop/a21.png"].texture);
+    var a21example= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a21.png"].texture);
         a21example.isSprite=true;
         a21example.tint=0x000000;
         a21example.scale.set(1.4);
@@ -1021,12 +1021,12 @@ export function makeSlides(){
 
     var backpropx_cost= layout.CX+75;
 
-    var yimg=new PIXI.Sprite(loader.resources["/images/backprop/y.png"].texture);
+    var yimg=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/y.png"].texture);
     yimg.isSprite=true;
     yimg.x=backpropx_cost-15;
     yimg.y=layout.CY-103;
 
-    var C=new PIXI.Sprite(loader.resources["/images/backprop/C.png"].texture);
+    var C=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/C.png"].texture);
     C.isSprite=true;
     C.scale.set(0.8);
     C.x=backpropx_cost-12;
@@ -1056,22 +1056,22 @@ export function makeSlides(){
     var arrowx=layout.CX-536;
     var arrowy=layout.CY-238;
 
-    var w3toc= new PIXI.Sprite(loader.resources["/images/backprop/arrows/w3toc.png"].texture);
+    var w3toc= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w3toc.png"].texture);
         w3toc.isSprite=true;
         w3toc.x=arrowx;
         w3toc.y=arrowy;
 
-    var dctot= new PIXI.Sprite(loader.resources["/images/backprop/dctot.png"].texture);
+    var dctot= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dctot.png"].texture);
         dctot.isSprite=true;
         dctot.x=backpropx_cost+100;
         dctot.y=layout.CY+30;
 
-    var w3= new PIXI.Sprite(loader.resources["/images/backprop/w3_teal.png"].texture);
+    var w3= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3_teal.png"].texture);
         w3.isSprite=true;
         w3.x=backpropx_cost+190;
         w3.y=layout.CY-125;
 
-    var w32= new PIXI.Sprite(loader.resources["/images/backprop/w3_teal.png"].texture);
+    var w32= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3_teal.png"].texture);
         w32.isSprite=true;
         w32.x=backpropx_cost+155;
         w32.y=layout.CY+25;
@@ -1101,24 +1101,24 @@ export function makeSlides(){
     SlideBack4.draw_init(netBack0);
     SlideBack4.drawCost();
 
-    var w3toc= new PIXI.Sprite(loader.resources["/images/backprop/arrows/w3toc.png"].texture);
+    var w3toc= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w3toc.png"].texture);
         w3toc.isSprite=true;
         w3toc.x=arrowx;
         w3toc.y=arrowy;
 
-    var w3= new PIXI.Sprite(loader.resources["/images/backprop/w3_teal.png"].texture);
+    var w3= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3_teal.png"].texture);
     w3.isSprite=true;
     w3.x=backpropx_cost+125;
     w3.y=layout.CY-225;
 
-    var dctot= new PIXI.Sprite(loader.resources["/images/backprop/dctot.png"].texture);
+    var dctot= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dctot.png"].texture);
     dctot.scale.set(0.7);
     dctot.isSprite=true;
     dctot.x=backpropx_cost+54;
     dctot.y=layout.CY-200;
 
 
-    var nablaC = new PIXI.Sprite(loader.resources["/images/cost/nablaC.png"].texture);
+    var nablaC = new PIXI.Sprite(loader.resources["/easyNN/images/cost/nablaC.png"].texture);
     nablaC.anchor.set(0.5)
     nablaC.scale.set(0.8)
 
@@ -1126,7 +1126,7 @@ export function makeSlides(){
     nablaC.x=backpropx_cost+270
     nablaC.y=layout.CY-90;
 
-    var nablaC2 = new PIXI.Sprite(loader.resources["/images/cost/nablaC.png"].texture);
+    var nablaC2 = new PIXI.Sprite(loader.resources["/easyNN/images/cost/nablaC.png"].texture);
     nablaC2.anchor.set(0.5)
     nablaC2.scale.set(0.7)
 
@@ -1134,14 +1134,14 @@ export function makeSlides(){
     nablaC2.x=backpropx_cost+160
     nablaC2.y=layout.CY-40;
 
-    var lr = new PIXI.Sprite(loader.resources["/images/cost/lr.png"].texture);
+    var lr = new PIXI.Sprite(loader.resources["/easyNN/images/cost/lr.png"].texture);
         lr.anchor.set(0.5)
         lr.scale.set(0.8)
         lr.isSprite=true;
         lr.x=backpropx_cost+385;
         lr.y=layout.CY-40;
 
-    var w3new = new PIXI.Sprite(loader.resources["/images/backprop/w3new.png"].texture);
+    var w3new = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3new.png"].texture);
         w3new.anchor.set(0.5)
         w3new.scale.set(0.8)
         w3new.isSprite=true;
@@ -1176,73 +1176,73 @@ export function makeSlides(){
     SlideBack5.draw_init(netBack0);
     SlideBack5.drawCost();
 
-    var w3all= new PIXI.Sprite(loader.resources["/images/backprop/arrows/w3all.png"].texture);
+    var w3all= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w3all.png"].texture);
     w3all.isSprite=true;
     w3all.x=arrowx;
     w3all.y=arrowy;
 
-    var dctot_small= new PIXI.Sprite(loader.resources["/images/backprop/dctot.png"].texture);
+    var dctot_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dctot.png"].texture);
         dctot_small.isSprite=true;
         dctot_small.x=backpropx_cost+90;
         dctot_small.y=layout.CY-200-55;
 
-    var dzdw3_small= new PIXI.Sprite(loader.resources["/images/backprop/dxdy/dzdw3.png"].texture);
+    var dzdw3_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dxdy/dzdw3.png"].texture);
         dzdw3_small.scale.set(0.85)
         dzdw3_small.anchor.set(0.5)
         dzdw3_small.isSprite=true;
         dzdw3_small.x=backpropx_cost+70;
         dzdw3_small.y=layout.CY-100+40;
 
-    var w3=new PIXI.Sprite(loader.resources["/images/backprop/w3_teal.png"].texture);
+    var w3=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3_teal.png"].texture);
         w3.isSprite=true;
         w3.anchor.set(0.5)
         w3.scale.set(0.8);
         w3.x=backpropx_cost +270;
         w3.y=layout.CY-100+45;
 
-    var z21=new PIXI.Sprite(loader.resources["/images/backprop/z21.png"].texture);
+    var z21=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/z21.png"].texture);
         z21.isSprite=true;
         z21.scale.set(0.6)
         z21.anchor.set(0.5)
         z21.x=backpropx_cost +355;
         z21.y=layout.CY-100+45;
 
-    var dadz21_small= new PIXI.Sprite(loader.resources["/images/backprop/dadz21.png"].texture);
+    var dadz21_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dadz21.png"].texture);
         dadz21_small.scale.set(0.85)
         dadz21_small.anchor.set(0.5)
         dadz21_small.isSprite=true;
         dadz21_small.x=backpropx_cost+70;
         dadz21_small.y=layout.CY+40;
 
-    var a21=new PIXI.Sprite(loader.resources["/images/backprop/a21.png"].texture);
+    var a21=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a21.png"].texture);
         a21.isSprite=true;
         a21.scale.set(0.6)
         a21.anchor.set(0.5)
         a21.x=backpropx_cost +355;
         a21.y=layout.CY+45;
 
-    var z212=new PIXI.Sprite(loader.resources["/images/backprop/z21.png"].texture);
+    var z212=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/z21.png"].texture);
         z212.isSprite=true;
         z212.scale.set(0.6)
         z212.anchor.set(0.5)
         z212.x=backpropx_cost +270;
         z212.y=layout.CY+45;
 
-    var dcda21_small= new PIXI.Sprite(loader.resources["/images/backprop/dcda21.png"].texture);
+    var dcda21_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda21.png"].texture);
         dcda21_small.scale.set(0.85)
         dcda21_small.anchor.set(0.5)
         dcda21_small.isSprite=true;
         dcda21_small.x=backpropx_cost+70;
         dcda21_small.y=layout.CY+100+40;
 
-        var a212=new PIXI.Sprite(loader.resources["/images/backprop/a21.png"].texture);
+        var a212=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a21.png"].texture);
         a212.isSprite=true;
         a212.scale.set(0.6)
         a212.anchor.set(0.5)
         a212.x=backpropx_cost +270;
         a212.y=layout.CY+100+45;
 
-        var ctot=new PIXI.Sprite(loader.resources["/images/backprop/ctot.png"].texture);
+        var ctot=new PIXI.Sprite(loader.resources["/easyNN/images/backprop/ctot.png"].texture);
         ctot.isSprite=true;
         ctot.scale.set(0.6)
         ctot.anchor.set(0.5)
@@ -1272,18 +1272,18 @@ export function makeSlides(){
     SlideBack6.draw_init(netBack0);
     SlideBack6.drawCost();
 
-    var w3all= new PIXI.Sprite(loader.resources["/images/backprop/arrows/w3all.png"].texture);
+    var w3all= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w3all.png"].texture);
     w3all.isSprite=true;
     w3all.x=arrowx;
     w3all.y=arrowy;
 
-    var dctot_small= new PIXI.Sprite(loader.resources["/images/backprop/dctot.png"].texture);
+    var dctot_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dctot.png"].texture);
       //  dctot_small.scale.set(0.5)
         dctot_small.isSprite=true;
         dctot_small.x=backpropx_cost+220;
         dctot_small.y=layout.CY-200;
 
-    var dcdw3= new PIXI.Sprite(loader.resources["/images/backprop/dcdw3.png"].texture);
+    var dcdw3= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcdw3.png"].texture);
     dcdw3.isSprite=true;
     dcdw3.scale.set(0.6)
     dcdw3.x=backpropx_cost;
@@ -1309,20 +1309,20 @@ export function makeSlides(){
     SlideBack7.draw_init(netBack0);
     SlideBack7.drawCost();
 
-    var dz21dw3_form= new PIXI.Sprite(loader.resources["/images/backprop/dz21dw3_form.png"].texture);
+    var dz21dw3_form= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dz21dw3_form.png"].texture);
     dz21dw3_form.isSprite=true;
     dz21dw3_form.scale.set(0.7)
     dz21dw3_form.x=backpropx_cost-20;
     dz21dw3_form.y=layout.CY-120;
 
-    var b21= new PIXI.Sprite(loader.resources["/images/backprop/b21.png"].texture);
+    var b21= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/b21.png"].texture);
     b21.isSprite=true;
     b21.scale.set(0.6)
     b21.anchor.set(0.5)
     b21.x=backpropx_cost+115;
     b21.y=layout.CY-150;
 
-    var w3toz= new PIXI.Sprite(loader.resources["/images/backprop/arrows/w3toz.png"].texture);
+    var w3toz= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w3toz.png"].texture);
     w3toz.isSprite=true;
     w3toz.x=arrowx;
     w3toz.y=arrowy;
@@ -1346,12 +1346,12 @@ export function makeSlides(){
     SlideBack8.draw_init(netBack0);
     SlideBack8.drawCost();
 
-    var ztoa= new PIXI.Sprite(loader.resources["/images/backprop/arrows/ztoa.png"].texture);
+    var ztoa= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/ztoa.png"].texture);
     ztoa.isSprite=true;
     ztoa.x=arrowx;
     ztoa.y=arrowy;
 
-    var da21dz_form= new PIXI.Sprite(loader.resources["/images/backprop/da21dz_form.png"].texture);
+    var da21dz_form= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/da21dz_form.png"].texture);
     da21dz_form.isSprite=true;
     da21dz_form.scale.set(0.7)
     da21dz_form.x=backpropx_cost;
@@ -1374,12 +1374,12 @@ export function makeSlides(){
     SlideBack9.drawCost();
 
 
-    var a21toc= new PIXI.Sprite(loader.resources["/images/backprop/arrows/a21toc.png"].texture);
+    var a21toc= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/a21toc.png"].texture);
     a21toc.isSprite=true;
     a21toc.x=arrowx;
     a21toc.y=arrowy;
 
-    var dcda12_form= new PIXI.Sprite(loader.resources["/images/backprop/dcda12_form.png"].texture);
+    var dcda12_form= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda12_form.png"].texture);
     dcda12_form.isSprite=true;
     dcda12_form.scale.set(0.7)
     dcda12_form.x=backpropx_cost;
@@ -1402,13 +1402,13 @@ export function makeSlides(){
         SlideBack10.drawCost();
     //    SlideBack10.drawCost_steps();
 
-    var dctotfinal_form= new PIXI.Sprite(loader.resources["/images/backprop/dctotfinal_form.png"].texture);
+    var dctotfinal_form= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dctotfinal_form.png"].texture);
     dctotfinal_form.isSprite=true;
     dctotfinal_form.scale.set(0.65)
     dctotfinal_form.x=backpropx_cost-10;
     dctotfinal_form.y=layout.CY-150;
 
-    var w3all= new PIXI.Sprite(loader.resources["/images/backprop/arrows/w3all.png"].texture);
+    var w3all= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w3all.png"].texture);
     w3all.isSprite=true;
     w3all.x=arrowx;
     w3all.y=arrowy;
@@ -1424,17 +1424,17 @@ export function makeSlides(){
     
 
     //BACK 11
-    var fakelearnbox = new PIXI.Sprite(loader.resources["/images/boxes/learnbox.png"].texture);
+    var fakelearnbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/learnbox.png"].texture);
     fakelearnbox.isSprite=true;
     fakelearnbox.x= layout.CX-200;
     fakelearnbox.y= layout.CY-50; 
     fakelearnbox.scale.set(1.2);
 
-    fakelearnbox.addChild(new Button("fakestep",loader.resources["/images/buttons/step.png"].texture,212.5,60,true));
-    fakelearnbox.addChild(new Button("fakelearn",loader.resources["/images/buttons/learn.png"].texture,125,60,true));
-    fakelearnbox.addChild(new Button("fakereset",loader.resources["/images/buttons/reset.png"].texture,38,60,true));        
+    fakelearnbox.addChild(new Button("fakestep",loader.resources["/easyNN/images/buttons/step.png"].texture,212.5,60,true));
+    fakelearnbox.addChild(new Button("fakelearn",loader.resources["/easyNN/images/buttons/learn.png"].texture,125,60,true));
+    fakelearnbox.addChild(new Button("fakereset",loader.resources["/easyNN/images/buttons/reset.png"].texture,38,60,true));        
 
-    var learnboxarrow = new PIXI.Sprite(loader.resources["/images/arrows/learnboxarrows.png"].texture);
+    var learnboxarrow = new PIXI.Sprite(loader.resources["/easyNN/images/arrows/learnboxarrows.png"].texture);
     learnboxarrow.anchor.set(0.5);
     learnboxarrow.isSprite=true;
     learnboxarrow.x=layout.CX-30;
@@ -1482,34 +1482,34 @@ export function makeSlides(){
     SlideBack13.backprop_labels=true;
     SlideBack13.none=true;
 
-    var ztoa= new PIXI.Sprite(loader.resources["/images/backprop/arrows/ztoa.png"].texture);
+    var ztoa= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/ztoa.png"].texture);
         ztoa.isSprite=true;
         ztoa.x=arrowx+10;
         ztoa.y=arrowy;
 
-    var a21toc= new PIXI.Sprite(loader.resources["/images/backprop/arrows/a21toc.png"].texture);
+    var a21toc= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/a21toc.png"].texture);
         a21toc.isSprite=true;
         a21toc.x=arrowx;
         a21toc.y=arrowy;
 
-    var biasarrow= new PIXI.Sprite(loader.resources["/images/backprop/arrows/biasarrow.png"].texture);
+    var biasarrow= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/biasarrow.png"].texture);
         biasarrow.isSprite=true;
         biasarrow.x=arrowx;
         biasarrow.y=arrowy;
 
-    var dcdb= new PIXI.Sprite(loader.resources["/images/backprop/dcdb.png"].texture);
+    var dcdb= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcdb.png"].texture);
         dcdb.isSprite=true;
         dcdb.scale.set(0.5)
         dcdb.x=backpropx_cost;
         dcdb.y=layout.CY-140;
 
-    var dcdb_final= new PIXI.Sprite(loader.resources["/images/backprop/dcdb_final.png"].texture);
+    var dcdb_final= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcdb_final.png"].texture);
         dcdb_final.isSprite=true;
         dcdb_final.scale.set(0.5)
         dcdb_final.x=backpropx_cost+20;
         dcdb_final.y=layout.CY+110;    
 
-    var dzdb= new PIXI.Sprite(loader.resources["/images/backprop/dzdb.png"].texture);
+    var dzdb= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dzdb.png"].texture);
     dzdb.isSprite=true;
     dzdb.scale.set(0.5)
     dzdb.x=backpropx_cost+180;
@@ -1539,36 +1539,36 @@ export function makeSlides(){
     SlideBackCalc8.backprop_labels=true;
     SlideBackCalc8.w1=true;
 
-    var w1 = new PIXI.Sprite(loader.resources["/images/backprop/w1_teal.png"].texture);
+    var w1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w1_teal.png"].texture);
         w1.isSprite=true;
         w1.x=backpropx_cost+20;
         w1.y=layout.CY-203;
 
-        var w3= new PIXI.Sprite(loader.resources["/images/backprop/w3_teal.png"].texture);
+        var w3= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w3_teal.png"].texture);
         w3.isSprite=true;
         w3.x=backpropx_cost+335;
         w3.y=layout.CY-203;
 
-    var dcdw1= new PIXI.Sprite(loader.resources["/images/backprop/dcdw1.png"].texture);
+    var dcdw1= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcdw1.png"].texture);
         dcdw1.isSprite=true;
         dcdw1.scale.set(0.6);
         dcdw1.x=backpropx_cost-10;
         dcdw1.y=layout.CY-140;
 
 
-    var dz1dw1= new PIXI.Sprite(loader.resources["/images/backprop/dz1dw1.png"].texture);
+    var dz1dw1= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dz1dw1.png"].texture);
         dz1dw1.isSprite=true;
         dz1dw1.scale.set(0.5)
         dz1dw1.x=backpropx_cost+60;
         dz1dw1.y=layout.CY;
 
-    var da1dz1= new PIXI.Sprite(loader.resources["/images/backprop/da1dz1.png"].texture);
+    var da1dz1= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/da1dz1.png"].texture);
     da1dz1.isSprite=true;
     da1dz1.scale.set(0.5)
     da1dz1.x=backpropx_cost+60;
     da1dz1.y=layout.CY+100;
 
-    var w1all = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1all.png"].texture);
+    var w1all = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1all.png"].texture);
     w1all.isSprite=true;
     w1all.x=arrowx;
     w1all.y=arrowy;
@@ -1596,54 +1596,54 @@ export function makeSlides(){
     SlideBackCalc9.backprop_labels=true;
     SlideBackCalc9.w1_all=true;
 
-    var w1all = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1all.png"].texture);
+    var w1all = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1all.png"].texture);
         w1all.isSprite=true;
         w1all.x=0;
         w1all.y=50;
 
-    var dcda1= new PIXI.Sprite(loader.resources["/images/backprop/dcda11.png"].texture);
+    var dcda1= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda11.png"].texture);
         dcda1.isSprite=true;
         dcda1.anchor.set(0.5);
         dcda1.scale.set(0.8);
         dcda1.x=backpropx_cost+170;
         dcda1.y=layout.CY-160;
 
-    var a11 = new PIXI.Sprite(loader.resources["/images/backprop/a11.png"].texture);
+    var a11 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a11.png"].texture);
         a11.isSprite=true;
         a11.scale.set(0.6)
         a11.x=backpropx_cost+115;
         a11.y=layout.CY-130;
 
-    var a21 = new PIXI.Sprite(loader.resources["/images/backprop/a21.png"].texture);
+    var a21 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a21.png"].texture);
         a21.isSprite=true;
         a21.scale.set(0.6)
         a21.x=backpropx_cost+265;
         a21.y=layout.CY-130;
 
-    var a22 = new PIXI.Sprite(loader.resources["/images/backprop/a22.png"].texture);
+    var a22 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/a22.png"].texture);
         a22.isSprite=true;
         a22.scale.set(0.6)
         a22.x=backpropx_cost+345;
         a22.y=layout.CY-130;
 
-    var c1 = new PIXI.Sprite(loader.resources["/images/backprop/c1.png"].texture);
+    var c1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/c1.png"].texture);
         c1.isSprite=true;
         c1.scale.set(0.6)
         c1.x=backpropx_cost+110;
         c1.y=layout.CY-105;
 
-    var c2 = new PIXI.Sprite(loader.resources["/images/backprop/c2.png"].texture);
+    var c2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/c2.png"].texture);
         c2.isSprite=true;
         c2.scale.set(0.6)
         c2.x=backpropx_cost+190;
         c2.y=layout.CY-105;
 
-    var w1toc = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1toc2.png"].texture);
+    var w1toc = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1toc2.png"].texture);
     w1toc.isSprite=true;
     w1toc.x=arrowx;
     w1toc.y=arrowy;
 
-    var dcda1_form1= new PIXI.Sprite(loader.resources["/images/backprop/dcda1_form1.png"].texture);
+    var dcda1_form1= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda1_form1.png"].texture);
         dcda1_form1.isSprite=true;
         dcda1_form1.scale.set(0.5)
         dcda1_form1.x=backpropx_cost-70;
@@ -1668,12 +1668,12 @@ export function makeSlides(){
     SlideBackCalc9b.backprop_labels=true;
     SlideBackCalc9b.w1_all=true;
 
-    var w1toc_expand1 = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1toc_expand1.png"].texture);
+    var w1toc_expand1 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1toc_expand1.png"].texture);
         w1toc_expand1.isSprite=true;
         w1toc_expand1.x=arrowx;
         w1toc_expand1.y=arrowy;
 
-    var dcda_form2= new PIXI.Sprite(loader.resources["/images/backprop/dcda_form2.png"].texture);
+    var dcda_form2= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda_form2.png"].texture);
         dcda_form2.isSprite=true;
         dcda_form2.scale.set(0.35,0.38)
         dcda_form2.x=backpropx_cost-45;
@@ -1698,29 +1698,29 @@ export function makeSlides(){
     SlideBackCalc9a.backprop_labels=true;
     SlideBackCalc9a.w1_all=true;
 
-    var w1arrows_all = new PIXI.Sprite(loader.resources["/images/backprop/w1arrows_all.png"].texture);
+    var w1arrows_all = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/w1arrows_all.png"].texture);
     w1arrows_all.isSprite=true;
     w1arrows_all.x=arrowx;
     w1arrows_all.y=arrowy;
 
-    var dcda1= new PIXI.Sprite(loader.resources["/images/backprop/dcda1.png"].texture);
+    var dcda1= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda1.png"].texture);
         dcda1.isSprite=true;
         dcda1.scale.set(0.45)
         dcda1.x=backpropx_cost-100;
         dcda1.y=20;
 
-    var w1toc_expand2 = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1toc_expand2.png"].texture);
+    var w1toc_expand2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1toc_expand2.png"].texture);
     w1toc_expand2.isSprite=true;
     w1toc_expand2.x=arrowx;
     w1toc_expand2.y=arrowy;
 
-    var dcda_form3= new PIXI.Sprite(loader.resources["/images/backprop/dcda_form3.png"].texture);
+    var dcda_form3= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dcda_form3.png"].texture);
     dcda_form3.isSprite=true;
     dcda_form3.scale.set(0.35,0.38)
     dcda_form3.x=backpropx_cost-45;
     dcda_form3.y=layout.CY-200;
 
-    var dcda1_full= new PIXI.Sprite(loader.resources["/images/backprop/formulas/dcda1_full.png"].texture);
+    var dcda1_full= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/formulas/dcda1_full.png"].texture);
     dcda1_full.isSprite=true;
     dcda1_full.scale.set(0.33)
     dcda1_full.x=backpropx_cost-30;
@@ -1744,25 +1744,25 @@ export function makeSlides(){
     SlideBackCalc9a2.w1_all=true;
        
     
-    var w1toc_expand2 = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1toc_expand2.png"].texture);
+    var w1toc_expand2 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1toc_expand2.png"].texture);
     w1toc_expand2.isSprite=true;
     w1toc_expand2.x=arrowx;
     w1toc_expand2.y=arrowy;
 
-    var dcda1_full2= new PIXI.Sprite(loader.resources["/images/backprop/formulas/dcda1_full2.png"].texture);
+    var dcda1_full2= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/formulas/dcda1_full2.png"].texture);
     dcda1_full2.isSprite=true;
     dcda1_full2.scale.set(0.38)
     dcda1_full2.x=backpropx_cost-100;
     dcda1_full2.y=layout.CY-200;
 
-    var dadz21_small= new PIXI.Sprite(loader.resources["/images/backprop/dadz21.png"].texture);
+    var dadz21_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dadz21.png"].texture);
     dadz21_small.scale.set(0.7)
     dadz21_small.anchor.set(0.5)
     dadz21_small.isSprite=true;
     dadz21_small.x=backpropx_cost+220;
     dadz21_small.y=layout.CY+165;
 
-    var dc1da21_small= new PIXI.Sprite(loader.resources["/images/backprop/dc1da21.png"].texture);
+    var dc1da21_small= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/dc1da21.png"].texture);
     dc1da21_small.scale.set(0.7)
     dc1da21_small.anchor.set(0.5)
     dc1da21_small.isSprite=true;
@@ -1787,12 +1787,12 @@ export function makeSlides(){
     SlideBackCalc9c.w1_all=true;
     
 
-    var w1toc_expand3 = new PIXI.Sprite(loader.resources["/images/backprop/arrows/w1toc_expand3.png"].texture);
+    var w1toc_expand3 = new PIXI.Sprite(loader.resources["/easyNN/images/backprop/arrows/w1toc_expand3.png"].texture);
     w1toc_expand3.isSprite=true;
     w1toc_expand3.x=arrowx;
     w1toc_expand3.y=arrowy;
 
-    var dcdw1_full= new PIXI.Sprite(loader.resources["/images/backprop/formulas/dcdw1_full.png"].texture);
+    var dcdw1_full= new PIXI.Sprite(loader.resources["/easyNN/images/backprop/formulas/dcdw1_full.png"].texture);
     dcdw1_full.isSprite=true;
     dcdw1_full.scale.set(0.5)
     dcdw1_full.x=backpropx_cost-165;

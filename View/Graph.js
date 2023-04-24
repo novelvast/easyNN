@@ -6,13 +6,13 @@ export class Graph extends PIXI.Sprite{
     constructor(datap){
         super();
 
-        this.axis=new PIXI.Sprite(loader.resources["/images/graph/axis.png"].texture);
+        this.axis=new PIXI.Sprite(loader.resources["/easyNN/images/graph/axis.png"].texture);
         this.axis.x=layout.CANVAS_WIDTH-240;
         this.axis.y=layout.BOTTOMBUFFER-230;
         this.axis.scale.set(0.8);
         this.axis.name="axis";
 
-        this.bg = new PIXI.Sprite(loader.resources["/images/graph/graph.png"].texture);
+        this.bg = new PIXI.Sprite(loader.resources["/easyNN/images/graph/graph.png"].texture);
         this.bg.height=200;
         this.bg.width=200;
 
@@ -48,7 +48,7 @@ export class Graph extends PIXI.Sprite{
 
                 this.fakedata.createSingleDatapoint_test([(i*10/this.numbgpoints),j*10/this.numbgpoints]);
             
-                var bgp = new PIXI.Sprite(loader.resources["/images/graph/bgtest.png"].texture);
+                var bgp = new PIXI.Sprite(loader.resources["/easyNN/images/graph/bgtest.png"].texture);
                 bgp.anchor.set(0.5);
                 bgp.x=(i*this.bgpointsize) 
                 bgp.y=(-j*this.bgpointsize)+this.bg.width; 
@@ -68,7 +68,7 @@ export class Graph extends PIXI.Sprite{
             for(var j =-4; j<(this.numbgpoints/2)+1;j++){        
 
                 this.fakedata.createSingleDatapoint_test([(i*10/this.numbgpoints),j*10/this.numbgpoints]);
-                var bgp = new PIXI.Sprite(loader.resources["/images/graph/bgtest.png"].texture);
+                var bgp = new PIXI.Sprite(loader.resources["/easyNN/images/graph/bgtest.png"].texture);
                 bgp.anchor.set(0.5);
                 bgp.x=(i*this.bgpointsize)+ (5*this.bgpointsize)
                 bgp.y=(-j*this.bgpointsize)+this.bg.width-(5*this.bgpointsize); 
@@ -107,7 +107,7 @@ export class Graph extends PIXI.Sprite{
 
     populateGraph(data){
         for(var i =0; i<data.points.length;i++){
-            var p = new PIXI.Sprite(loader.resources["/images/graph/point.png"].texture);
+            var p = new PIXI.Sprite(loader.resources["/easyNN/images/graph/point.png"].texture);
             p.anchor.set(0.5);
            
 
