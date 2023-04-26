@@ -7,7 +7,6 @@ import {fruits, fruits_single} from "../Model/data.js"
 import {Graph} from "./Graph.js"
 import {textstyles} from "./textstyles.js"
 import { Button } from "./Button.js";
-// import {viewst} from "../Controller.js"
 
 import { loader } from "./View.js";
 
@@ -92,25 +91,13 @@ export function makeSlides(){
     /*  ------- INSTRUCTIONS --------*/ 
 
 
-    
-
-
-
-
     /*  ------- INTRO --------*/ 
 
     // INTRO 1
     
-    
-    
-
     //INTRO 2
     
-
-
-
     //INTRO 3
-    
 
     //INTRO 4
     var percep_blank =new PIXI.Sprite(loader.resources["/easyNN/images/intro/percep_blank1.png"].texture);
@@ -550,81 +537,15 @@ export function makeSlides(){
 
 
     //back intro 1
-    var textNet1d = [
-        [["既然我们已经建立了我们的神经网络网络，我们可以开始着手训练它."], [layout.CX-250,layout.CY-120]],
-        [["这是神经网络学习如何将数据分类的过程."], [layout.CX-350,layout.CY-70]],
-        [["为了学习，我们的神经网络需要使用一种算法，叫做"], [" 反向传播.",textstyles.large_bold], [layout.CX-320,layout.CY-20]],
-
-    ];
-    SlideBackIntro1.drawText(textNet1d);
-    SlideBackIntro1.drawTextButtons();
+   
 
     //back2
-    var percep_forward=new PIXI.Sprite(loader.resources["/easyNN/images/cost/percep_forward.png"].texture);
-    percep_forward.anchor.set(0.5);
-    percep_forward.isSprite=true;
-    percep_forward.scale.set(0.6)
-    percep_forward.x=layout.CX+300;
-    percep_forward.y=layout.CY-120;
-
-    var percep_cost=new PIXI.Sprite(loader.resources["/easyNN/images/cost/percep_cost.png"].texture);
-    percep_cost.anchor.set(0.5);
-    percep_cost.isSprite=true;
-    percep_cost.scale.set(0.6)
-    percep_cost.x=layout.CX+350;
-    percep_cost.y=layout.CY+20;
-
-    var percep_update=new PIXI.Sprite(loader.resources["/easyNN/images/cost/percep_update.png"].texture);
-    percep_update.anchor.set(0.5);
-    percep_update.isSprite=true;    
-    percep_update.scale.set(0.6)
-    percep_update.x=layout.CX+320;
-    percep_update.y=layout.CY+160;
-
-
-    var textNet1d2 = [
-        percep_forward,percep_cost,percep_update,
-        [["反向传播有3个步骤:"], [layout.CX-450,layout.CY-180]],
-        [["1. 前向传播                                           " +'\n', textstyles.large_bold],
-         [     "就像我们之前做的那样 - 我们给网络一个输入，然后计算输出.  "], [layout.CX-420,layout.CY-120]],
-        [["2. 误差计算                                                  " +'\n', textstyles.large_bold],
-         [     "我的实际输出值与目标值相差多少？"], [layout.CX-420,layout.CY]],
-        [["3. 更新                                                                    " +'\n', textstyles.large_bold],
-         [     "调整权重和偏置来让结果更接近目标值. "], [layout.CX-420,layout.CY+120]],
-
-    ];
-    SlideBackIntro2.drawText(textNet1d2);
-    SlideBackIntro2.drawTextButtons();
+   
 
 
 
     //COST 1
-    var costform = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costformwb2.png"].texture);
-        costform.scale.set(0.8)
-        costform.anchor.set(0.5)
-
-        costform.isSprite=true;
-        costform.x=layout.CX;
-        costform.y=layout.CY-30;
-
-        var ital_sm= new PIXI.TextStyle({
-            fontFamily: 'Helvetica',
-            fontWeight: 400,
-            fontSize: 18,
-            fontStyle: 'italic'
-        
-          });
-
-    var textError1 = [
-        costform,
-        [["我们想知道我们网络的输出与目标值相差有多远."], [layout.CX-450,layout.CY-190]],
-        [["为了做到这一点，我们需要使用"],[" 代价函数(cost function).",textstyles.large_bold], [layout.CX-350,layout.CY-140]],
-
-        [[" n = 数据点的个数"+'\n'+" x = 对每个输出神经元 ",ital_sm], [layout.CX -300,layout.CY+40]],
-        [["输出神经元的激活取决于网络的当前网络的权重和偏置."], [layout.CX-450,layout.CY+120]],
-        [["所以，我们可以把代价函数看成是整个神经网络的权重和偏差的函数. "], [layout.CX-450,layout.CY+170]],
-    ];
-    SlideCost1.drawText(textError1);
+   
 
     //COST 2
     SlideCost2.leftnet=true;
@@ -660,147 +581,19 @@ export function makeSlides(){
     // layout.NEURON_UPPERLIM = window.innerHeight/2 -80;
 
     //COST 3
-    var costgraph = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph.png"].texture);
-    costgraph.anchor.set(0.5)
-    costgraph.isSprite=true;
-
-    var costgraphx= layout.CX-230;
-    var costgraphy= layout.CY+50;
-
-    costgraph.x=costgraphx;
-    costgraph.y=costgraphy;
-
-    var textError3 = [
-        costgraph,
-        [["让我们看一下单个权重."], [layout.CX-450,layout.CY-200]],
-        [["它与代价的关系看起来大概是这样的."], [layout.CX-450,layout.CY-150]],
-        [["我们希望找到一个 w 的值"+'\n'+"这个w值会让代价最小.",textstyles.large_bold], [layout.CX+40,layout.CY-80]],
-        [["虽然这个问题看起来很简单,"+'\n'+"但因为神经网络有多个权重和偏置," 
-            +'\n'+"因此影响代价的因素不止一个   ", textstyles.medium], [layout.CX+40,layout.CY]],
-        [["(We just quickly run out of dimensions to visualize it in.)", textstyles.medium], [layout.CX+40,layout.CY+90]],
-    ];
-    SlideCost3.drawText(textError3);
+    
 
     //COST 4
-    var costgraph_point = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_point.png"].texture);
-    costgraph_point.anchor.set(0.5)
-    costgraph_point.isSprite=true;
-    costgraph_point.x=costgraphx;
-    costgraph_point.y=costgraphy;
-
-    var nablaC = new PIXI.Sprite(loader.resources["/easyNN/images/cost/nablaC.png"].texture);
-    nablaC.anchor.set(0.5)
-    nablaC.scale.set(0.8)
-
-    nablaC.isSprite=true;
-    nablaC.x=layout.CX+70+185;
-    nablaC.y=layout.CY+70+13;
-
-    var textError4 = [
-        costgraph_point,
-        [["为了调整神经网络的权重和偏置来使代价最小化，我们使用了一种算法："+'\n'],["          梯度下降法.", textstyles.large_bold], [layout.CX-450,layout.CY-180]],
-        [["首先，我们找到当前的权重和偏置."], [layout.CX+40,layout.CY-80]],
-        [["接下来，我们求出这个点的斜率, 或者叫做"], [" 梯度 "+'\n',textstyles.large_bold], [layout.CX+40,layout.CY-20]],
-        [["我们把它记作            "], [layout.CX+70,layout.CY+70]],
-        nablaC,
-
-
-    ];
-    SlideCost4.drawText(textError4);
+   
 
     //COST 5
-    var costgraph_slope = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_slope1.png"].texture);
-        costgraph_slope.anchor.set(0.5)
-        costgraph_slope.isSprite=true;
-        costgraph_slope.x=costgraphx;
-        costgraph_slope.y=costgraphy;
-
-
-        var minnablaC = new PIXI.Sprite(loader.resources["/easyNN/images/cost/minnablaC.png"].texture);
-            minnablaC.anchor.set(0.5)
-            minnablaC.scale.set(0.8)
-
-            minnablaC.isSprite=true;
-            minnablaC.x=layout.CX+445;
-            minnablaC.y=layout.CY-190+13;
-
-        var minnablaC2 = new PIXI.Sprite(loader.resources["/easyNN/images/cost/minnablaC.png"].texture);
-            minnablaC2.anchor.set(0.5)
-            minnablaC2.scale.set(0.8)
-
-            minnablaC2.isSprite=true;
-            minnablaC2.x=layout.CX+40+165;
-            minnablaC2.y=layout.CY-95+13;
-
-        var lr = new PIXI.Sprite(loader.resources["/easyNN/images/cost/lr.png"].texture);
-            lr.anchor.set(0.5)
-            lr.scale.set(0.8)
-
-            lr.isSprite=true;
-            lr.x=layout.CX+195+165;
-            lr.y=layout.CY-48+13
-
-        var wnewform = new PIXI.Sprite(loader.resources["/easyNN/images/cost/wnewform.png"].texture);
-            wnewform.anchor.set(0.5)
-            wnewform.scale.set(0.7)
-
-            wnewform.isSprite=true;
-            wnewform.x=layout.CX+220;
-            wnewform.y=layout.CY+170;
-
-    var textError5 = [
-        costgraph_slope,
-
-        [["我们想沿着下坡的方向移动，所以              "], [layout.CX,layout.CY-190]],
-        minnablaC,
-
-        [["We find the magnitude of change           "
-            +'\n\n'+ "by multiplying"+'\n\n'+ "by a value called the learning rate"], [layout.CX+40,layout.CY-140]],
-        minnablaC2,
-        [["这是一个我们事先设定好的数字 -" +'\n'+"通常在 0 和 1 之间.",textstyles.medium], [layout.CX+60,layout.CY+5]],
-        lr,
-        [["我们最终用来更新权重的公式是:"], [layout.CX+40,layout.CY+80]],
-        wnewform
-
-    ];
-    SlideCost5.drawText(textError5);
+   
 
     //COST 6
-    var costgraph_slope2 = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_slope2.png"].texture);
-        costgraph_slope2.anchor.set(0.5)
-        costgraph_slope2.isSprite=true;
-        costgraph_slope2.x=costgraphx;
-        costgraph_slope2.y=costgraphy;
-    var textError6 = [
-        costgraph_slope2,
-        [["一直重复这些步骤，直到斜率变为0."], [layout.CX+20,layout.CY-60]],
-        [["每次我们计算代价并更新我们的网络"+'\n'+" 被叫做一次"],[" ？？(epoch).", textstyles.large_bold], [layout.CX+20,layout.CY]],
-    ];
-    SlideCost6.drawText(textError6);
+    
 
     //COST 7
-    var costgraph_lrsmall = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_lrsmall.png"].texture);
-        costgraph_lrsmall.anchor.set(0.5)
-        costgraph_lrsmall.scale.set(0.8)
-        costgraph_lrsmall.isSprite=true;
-        costgraph_lrsmall.x=layout.CX-200;
-        costgraph_lrsmall.y=layout.CY;
-
-    var costgraph_lrlarge = new PIXI.Sprite(loader.resources["/easyNN/images/cost/costgraph_lrlarge.png"].texture);
-        costgraph_lrlarge.anchor.set(0.5);
-        costgraph_lrlarge.scale.set(0.8);
-        costgraph_lrlarge.isSprite=true;
-        costgraph_lrlarge.x=layout.CX+200;
-        costgraph_lrlarge.y=layout.CY;
-
-
-    var textError6a = [
-        costgraph_lrsmall,costgraph_lrlarge,
-        [["学习率的大小是很重要的."], [layout.CX-450,layout.CY-180]],
-        [["学习率太小，则需要 "+'\n'+ "很长时间才能到达最小值."], [layout.CX-350,layout.CY+150]],
-        [["学习率太大，我们可能"+'\n'+ " 会跳过最小值."], [layout.CX+50,layout.CY+150]]
-    ];
-    SlideCost7.drawText(textError6a);
+    
 
 
     //COST 8
@@ -890,55 +683,11 @@ export function makeSlides(){
 
 
     //COST 10
-    var fakelearnbox = new PIXI.Sprite(loader.resources["/easyNN/images/boxes/learnbox.png"].texture);
-        fakelearnbox.isSprite=true;
-        fakelearnbox.x= layout.CX-200;
-        fakelearnbox.y= layout.CY+75; 
-        fakelearnbox.scale.set(1.2);
 
-    fakelearnbox.addChild(new Button("fakestep",loader.resources["/easyNN/images/buttons/step.png"].texture,212.5,60,true));
-    fakelearnbox.addChild(new Button("fakelearn",loader.resources["/easyNN/images/buttons/learn.png"].texture,125,60,true));
-    fakelearnbox.addChild(new Button("fakereset",loader.resources["/easyNN/images/buttons/reset.png"].texture,38,60,true));        
-
-    var learnboxarrow = new PIXI.Sprite(loader.resources["/easyNN/images/arrows/learnboxarrows.png"].texture);
-    learnboxarrow.anchor.set(0.5);
-    learnboxarrow.isSprite=true;
-    learnboxarrow.x=layout.CX-30;
-    learnboxarrow.y=layout.CY+10;
-
-    var textError6b = [
-    fakelearnbox,
-    [["就是这样!",textstyles.large_bold],[" 神经网络的“学习”就是更新其权重和偏差"], [layout.CX-300,layout.CY-200]],
-    [["以最小化代价的过程               "], [layout.CX-300,layout.CY-160]],
-
-    [["你已经完成了教程!", textstyles.large_bold], [layout.CX-170,layout.CY-90]],
-    [["下一页是沙盒模式 ———— 可以随意调整之前的神经网络。"], [layout.CX-350,layout.CY-40]],
-    [["点击这个按钮" +'\n'+ "来重置网络.",textstyles.medium], [layout.CX-350,layout.CY+90]],
-    [["点击这个按钮"+'\n'+ "来连续执行反向传播.",textstyles.medium], [layout.CX+150,layout.CY+70]],
-    [["点击这个按钮"+'\n'+ " 来进行一次反向传播.",textstyles.medium], [layout.CX+190,layout.CY+150]],
-    learnboxarrow,
-    // [["On the next slide is sandbox mode. Click this button to backpropogate for one epoch."+'/n'+" Click this button to continueously backpropogate. Click this button to reset the weights and biases."], [layout.CX-460,layout.CY+40]],
-
-
-    ];
-    SlideCost10.drawText(textError6b);
 
 
     //Credit
-        SlideCredit.slidecredit=true;
-        var textCredit = [
-            [["Created by Allison George", textstyles.large_bold], [layout.CX-150,layout.CY-150]],
-            [["feel free to email me at aegeorge@udel.edu"+'\n'+
-            " or send me a tweet at @aegeorge42 "], [layout.CX-180,layout.CY-100]],
-
-            [["Huge thanks to:"], [layout.CX-180,layout.CY]],
-            [["3blue1brown                                      " +'\n', textstyles.large_bold],
-            [     "    3blue1brown.com/lessons/neural-networks  "], [layout.CX-180,layout.CY+50]],
-            [["Michael Nielsen                                  " +'\n', textstyles.large_bold],
-            [     "    neuralnetworksanddeeplearning.com  "], [layout.CX-180,layout.CY+125]],
-
-    ];
-    SlideCredit.drawText(textCredit);
+        
 
 
 

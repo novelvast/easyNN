@@ -69,7 +69,6 @@ import {SlideHome,
     SlideCredit,
     makeSlides,
 } from "./allSlides.js"
-import { Slide } from "./Slide.js";
 import { textstyles } from "./textstyles.js";
 
 export var openerloader = PIXI.loader;
@@ -90,14 +89,7 @@ export class View{
 
         this.app=app;
         document.getElementById("canvascon").appendChild(this.app.view);
-        // document.body.appendChild(this.app.view);
-
-        // var opener = new PIXI.Sprite(PIXI.Texture.from('/easyNN/images/opener.png'));
-        //     opener.name="opener";
-        //     opener.anchor.set(0.5);
-        //     opener.x=layout.CANVAS_WIDTH/2;
-        //     opener.y=layout.CANVAS_HEIGHT/2;
-        // this.app.stage.addChild(opener);
+  
 
         var loading = new PIXI.Sprite(PIXI.Texture.from('/easyNN/images/loading.png'));
             loading.name="loading";
@@ -320,36 +312,10 @@ export class View{
             vst.drawSlide_init();
 
 
-            // // 渲染页脚
-            // var footer=new PIXI.Graphics();
-            //     footer.name="footer";
-            //     footer.beginFill(0x666666);
-            //     footer.drawRect(0,layout.CANVAS_HEIGHT,layout.CANVAS_WIDTH,-layout.FOOTER_HEIGHT);
-            // app.stage.addChild(footer);
 
-            // // 渲染侧边栏
-            // var header = new PIXI.Graphics();
-            //     header.name="header";
-            //     header.beginFill(0x4d4d4d);
-            //     header.drawRect(0,0,layout.HEADER_WIDTH,layout.CANVAS_HEIGHT);
-            // app.stage.addChild(header);
-
-
-
-            // vst.createButtons();
-
-            // vst.caveats();
-            // app.stage.getChildByName("button_start").visible=true;
             app.stage.getChildByName("loading").visible=false;
 
-            /* numbers slides - helpful for debugging
-            for(var i=0; i<vst.slideList.length;i++){
-                var currText=new PIXI.Text(i);
-                currText.x=0;
-                    currText.y=45;
-                vst.slideList[i].slideContainer.addChild(currText);
-            }
-            */
+
 
         }
 
