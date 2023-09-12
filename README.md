@@ -14,11 +14,14 @@
 
 例如：
 
-![sandbox](E:\easyNN\documents\sandbox.jpg)
+![sandbox](https://github.com/novelvast/easyNN/assets/113240184/6236f3e0-9335-41ca-acf9-5a7abff76f22)
 
-![sandbox](E:\easyNN\documents\layer.jpg)
 
-![sandbox](E:\easyNN\documents\train.jpg)
+![layer](https://github.com/novelvast/easyNN/assets/113240184/1d2c6eed-0395-41a1-9348-1e0e4a994175)
+
+
+![train](https://github.com/novelvast/easyNN/assets/113240184/37382822-da43-4fa4-b0db-1bc3ae4a3a46)
+
 
 
 
